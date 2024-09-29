@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -9,7 +10,7 @@
         <div id="container-produtos-evp">
             <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                <img src="" id="container-pagina-imagens-produtos-evp" >
+                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
                     <div class="botao-saibamais" id="botao-saibamais"> 
                     <a href="">
@@ -24,7 +25,7 @@
                 
                 <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                <img src="" id="container-pagina-imagens-produtos-evp" >
+                <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP GUARD ON</span>
                     <div id="botao-saibamais"> 
                     <a href="">
@@ -39,7 +40,7 @@
 
                 <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                <img src="" id="container-pagina-imagens-produtos-evp" >
+                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
                     <div id="botao-saibamais"> 
                     <a href="">
@@ -54,8 +55,8 @@
 
                 <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                    <img src="" id="container-pagina-imagens-produtos-evp">
-                    <span id="titulo-do-produto"> CONTROLES </span>
+                    <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
+                    <span id="titulo-do-produto"> SIRENES </span>
                     <div class="botao-saibamais" id="botao-saibamais"> 
                         <a href="">
                             <div class="botaodownload">Ver Especificações</div>
@@ -69,8 +70,8 @@
 
                 <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                    <img src="" id="container-pagina-imagens-produtos-evp" >
-                    <span id="titulo-do-produto">SIRENES</span>
+                    <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
+                    <span id="titulo-do-produto">CONTROLES </span>
                     <div id="botao-saibamais"> 
                         <a href="">
                             <div class="botaodownload"> Ver Especificações</div>
@@ -84,7 +85,7 @@
 
                 <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
-                    <img src="" id="container-pagina-imagens-produtos-evp" >
+                    <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
                     <span id="titulo-do-produto"> HASTES </span>
                     <div id="botao-saibamais"> 
                         <a href="">
@@ -100,15 +101,20 @@
         </div><!--final de todos os produtos-->
 
             <div class="vejamais">
+              <RouterLink to="/productsCompleted">
                 <button>Ver catálogo completo</button>
+              </RouterLink>
             </div>
     </section> <!--final portifolio-->
 </template>
 
 <style>
 .portifolio {
-  height: 1000px;
-  margin-top: 50px;
+  height: 850px;
+  width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
   @media (max-width: 1280px) {
     margin-left: auto;
     margin-right: auto;
@@ -118,13 +124,13 @@
   text-align: center;
   font-size: 40px;
   background-color: #5B9FC9;
-  width: 50%;
+  width: 60%;
   color: white;
   border-radius: 10px;
   box-shadow: #b3b3b3 2px 2px 2px 2px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   @media (max-width: 1280px) {
     font-size: 25px;
     margin-bottom: 30px;
@@ -140,9 +146,9 @@
   }
 }
 #container-pagina-produtos-evp{
-  width: 480px;
+  width: 400px;
   border-radius: 10px;
-  height: 310px;
+  height: 290px;
   border: #babdc6 2px solid;
   box-shadow: #bbbfc6 1px 1px 1px 1px;
   margin: 20px;
@@ -158,7 +164,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 #container-pagina-produtos-evp:hover {
   background-color: #5b9fc9;
@@ -206,8 +212,8 @@ a{
 }
 .vejamais {
   display: flex;
-  margin-top: 20px;
-  gap: 10px;
+  margin-top: 10px;
+  justify-content: center;
 }
 .vejamais button {
   background-color: #3C6D7E;

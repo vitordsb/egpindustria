@@ -1,22 +1,22 @@
 <script setup>
-    import { RouterLink } from 'vue-router' 
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
     <header class="header">
         <div class="leftside">
-            <a href="index.html">
+            <RouterLink to="/">
                 <img src="/public/images/egppreto.png" alt="Logo" class="logo">
-            </a>
+            </RouterLink>
         </div>
 
         <div class="midleside">
             <div class="navbar">
-                <RouterLink to="/">Home</RouterLink>
                 <RouterLink to="/products">Produtos</RouterLink>
-                <RouterLink to="/about">Sobre</RouterLink>
+                <RouterLink to="/manuais">Manuais</RouterLink>
+                <RouterLink to="/about">Sobre-nós</RouterLink>
                 <RouterLink to="/contact">Contato</RouterLink>
-                <RouterLink to="/blog">Blog</RouterLink>
+                <RouterLink to="/login">Login</RouterLink>
             </div>
         </div> <!--Final midleside-->
 
@@ -39,7 +39,7 @@
 
 <style scoped>
 
-header.header {
+.header {
     z-index: 999;
     width: 100%;
     display: flex;
@@ -49,12 +49,13 @@ header.header {
     height: 70px;
 }
 
-div.leftside {
+
+.leftside {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-div.leftside img {
+.leftside img {
     width: 180px;
     transition: calc(.4s);
     cursor: pointer;
@@ -62,20 +63,19 @@ div.leftside img {
         width: 150px;
     }
 }
-div.leftside img:hover {
+.leftside img:hover {
     transform: scale(1.025);
 }
 
-div.midleside {
+.midleside {
     display: flex;
     align-items: center;
-    gap: 55px;
     font-size: 20px;
     @media (max-width: 1280px) {
         font-size: 18px;
     }
 }
-div.midleside div.navbar {
+.midleside .navbar {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -84,35 +84,18 @@ div.midleside div.navbar {
         width: 100%;
     }
 }
-div.midleside div.navbar a {
+.midleside .navbar a {
     text-decoration: none;
     color: gray;
     transition: calc(.5s);
-}
-div.midleside div.navbar a:hover {
-    color: #48939E;
-    transform: scale(1.1);
-    font-weight: bolder;
-}
-div.midleside div.socialmedia div.icons {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-div.midleside div.socialmedia div.icons p {
-    color: gray;
-}
-div.midleside div.socialmedia a {
-    text-decoration: none;
-    color: gray;
-    transition: calc(.4s);
-}
-div.midleside div.socialmedia a:hover {
-    color: #48939E;
-    font-weight: bolder;
+    &:hover{
+        cursor: pointer;
+        color: #3a7980;
+        transform: scale(1.05);
+    }
 }
 
-div.rightside {
+.rightside {
     color: white;
     width: 530px;
     height: 40px;

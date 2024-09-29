@@ -4,24 +4,11 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <div id="app">
-    <Header/>
-
-    <transition name="fade" mode="out-in">
-      <router-view/>
-    </transition>
-
+  <Header/>
+    <router-view/>
     <Footer/>
-  </div>
 </template>
 
-<style scoped>
+<style>
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0;
-}
 </style>
