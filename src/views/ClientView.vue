@@ -216,8 +216,9 @@ form h2{
 }
 
 .icon i{
-    color: #d9d9d9;
+    color: #000000;
     transition: all .5s;
+    font-size: 20px;
 }
 
 .input{
@@ -273,8 +274,8 @@ form h2{
     cursor: pointer;
     transition: calc(.4s);
 }
-.butao p {
-    font-size: 40px;
+.butao i {
+    font-size: 30px;
 }
 .butao:hover {
     background-color: #A80754;

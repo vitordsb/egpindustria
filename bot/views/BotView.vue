@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue';
 import { arrayOfPossibleMessage } from './responses';
 
 export default {
@@ -42,23 +41,35 @@ export default {
     }
 
     async function chatBotResponse(userMessage) {
-      let chatBotMessage = "";
-      let result = arrayOfPossibleMessage.find(val => userMessage.toLowerCase().includes(val.mensagem.toLowerCase()));
-      let typingElement = createTypingElement("Electra");
-      chatContainer.appendChild(typingElement);
-      let dots = document.getElementById('dots');
-      animateDots(dots);
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      clearInterval(interval);
-      chatContainer.removeChild(typingElement);
+  let chatBotMessage = "";
+  
+  // Normaliza a mensagem do usuário para remover acentos e transforma em minúsculas
+  let normalizedUserMessage = userMessage.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  
+  // Procura a resposta no array de mensagens normalizando a mensagem também
+  let result = arrayOfPossibleMessage.find(val => 
+    normalizedUserMessage.includes(val.mensagem.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase())
+  );
+  
+  let typingElement = createTypingElement("Electra");
+  chatContainer.appendChild(typingElement);
+  
+  let dots = document.getElementById('dots');
+  animateDots(dots);
+  
+  await new Promise(resolve => setTimeout(resolve, 1000));
+  
+  clearInterval(interval);
+  chatContainer.removeChild(typingElement);
 
-      if (userMessage.trim().toLowerCase() === "opções") {
-        escolher(userMessage);
-      } else {
-        chatBotMessage = result ? result.response : "Desculpe, não entendi o que você quis dizer.";
-        displayChatBotMessage(chatBotMessage, result ? "blue" : "red");
-      }
-    }
+  if (normalizedUserMessage === "opcoes") {
+    escolher(userMessage);
+  } else {
+    chatBotMessage = result ? result.response : "Desculpe, não entendi o que você quis dizer.";
+    displayChatBotMessage(chatBotMessage, result ? "blue" : "red");
+  }
+}
+
 
     function createTypingElement(name) {
       let typingElement = document.createElement('div');
@@ -109,7 +120,7 @@ export default {
 .background {
   margin-top: 10px;
   height: 850px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .media {
   padding: 5px;
@@ -172,10 +183,9 @@ export default {
   text-align: right;
   background-color: white;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px 0;
   align-self: flex-end;
-  border: 1px solid black;
   font-size: 20px;
 }
 
@@ -185,10 +195,9 @@ export default {
   text-align: left;
   background-color: white;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 10px 0;
   align-self: flex-start;
-  border: 1px solid black;
   font-size: 20px;
   font-weight: bolder;
 }
@@ -201,8 +210,7 @@ export default {
   text-align: left;
   background-color: white;
   padding: 10px;
-  border-radius: 15px;
-  border: 1px solid black;
+  border-radius: 10px;
   color: blue;
   align-self: flex-start;
 }
