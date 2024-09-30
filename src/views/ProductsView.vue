@@ -1,5 +1,37 @@
-<script setup>
+<script>
 import { RouterLink } from 'vue-router'
+
+
+export function abrirTodosProdutos() {
+  const botao = document.getElementById("botao-vejamais");
+  const background = document.querySelector('.background');
+  //Pegar o elemento da div que vai abrir todos os produtos
+  const divTodosProdutos = document.getElementById("container-produtos-view");
+  if (divTodosProdutos.style.display === "none") {
+    botao.style.display = "none";
+    background.style.marginTop = "0px";
+    divTodosProdutos.style.display = "flex";
+    divTodosProdutos.style.flexWrap = "wrap";
+    divTodosProdutos.style.justifyContent = "center";
+  } else {
+    divTodosProdutos.style.display = "flex";
+    divTodosProdutos.style.flexWrap = "wrap";
+    divTodosProdutos.style.justifyContent = "center";
+    botao.style.display = "none";
+    background.style.marginTop = "550px"; 
+  }
+  
+}
+
+export default {
+  components: {
+    RouterLink
+  },
+  methods: {
+    abrirTodosProdutos,
+  }
+}
+
 </script>
 
 <template>
@@ -101,10 +133,105 @@ import { RouterLink } from 'vue-router'
         </div><!--final de todos os produtos-->
 
             <div class="vejamais">
-              <RouterLink to="/productsCompleted">
-                <button>Ver catálogo completo</button>
-              </RouterLink>
+
+                <button v-on:click="abrirTodosProdutos" id="botao-vejamais">Ver catálogo completo</button>
+
             </div>
+          
+        <div id="container-produtos-view">
+            <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
+                <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
+                    <div class="botao-saibamais" id="botao-saibamais"> 
+                    <a href="">
+                        <div class="botaodownload">Ver Especificações</div>
+                    </a>
+                    <a href="#">
+                        <div class="botaodownload">Ver manual</div>
+                    </a> 
+                </div>
+                </div>
+                </div> <!--final primeiro produto-->
+                
+                <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
+                <span id="titulo-do-produto"> EGP GUARD ON</span>
+                    <div id="botao-saibamais"> 
+                    <a href="">
+                        <div class="botaodownload"> Ver Especificações</div>
+                    </a>
+                    <a href="#">
+                        <div class="botaodownload"> Ver manual</div>
+                    </a> 
+                </div>
+                </div>
+                </div><!--Final segundo produto-->
+
+                <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
+                <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
+                    <div id="botao-saibamais"> 
+                    <a href="">
+                        <div class="botaodownload"> Ver Especificações</div>
+                    </a>
+                    <a href="#">
+                        <div class="botaodownload"> Ver manual</div>
+                    </a> 
+                </div>
+                </div>
+                </div><!--Final terceiro produto-->
+
+                <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                    <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
+                    <span id="titulo-do-produto"> SIRENES </span>
+                    <div class="botao-saibamais" id="botao-saibamais"> 
+                        <a href="">
+                            <div class="botaodownload">Ver Especificações</div>
+                        </a>
+                        <a href="#">
+                            <div class="botaodownload">Ver manual</div>
+                        </a> 
+                    </div>
+                    </div>
+                </div> <!--final quarto produto-->
+
+                <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                    <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
+                    <span id="titulo-do-produto">CONTROLES </span>
+                    <div id="botao-saibamais"> 
+                        <a href="">
+                            <div class="botaodownload"> Ver Especificações</div>
+                        </a>
+                        <a href="#">
+                            <div class="botaodownload"> Ver manual</div>
+                        </a> 
+                    </div>
+                    </div>
+                </div><!--Final quinto produto-->
+
+                <div id="container-pagina-produtos-evp"> 
+                <div id="container-pagina-divs-produtos-evp">
+                    <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
+                    <span id="titulo-do-produto"> HASTES </span>
+                    <div id="botao-saibamais"> 
+                        <a href="">
+                            <div class="botaodownload"> Ver Especificações</div>
+                        </a>
+                        <a href="#">
+                            <div class="botaodownload"> Ver manual</div>
+                        </a> 
+                    </div>
+                    </div>
+                </div><!--Final sexto produto-->
+
+        </div><!--final de todos os produtos-->
+
+        
     </section> <!--final portifolio-->
 </template>
 
@@ -114,7 +241,7 @@ import { RouterLink } from 'vue-router'
   width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 80px;
   @media (max-width: 1280px) {
     margin-left: auto;
     margin-right: auto;
@@ -233,5 +360,10 @@ a{
   background-color: #5b9fc9;
   color: white;
   transform: scale(1.025);
+}
+
+#container-produtos-view{
+  display: none;
+
 }
 </style>

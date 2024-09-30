@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router' 
 import ProductsView from './ProductsView.vue';
 import aboutusView from './aboutusView.vue';
+import Footer from '@/components/Footer.vue';
 const track = ref(null);  
 const currentIndex = ref(0);
 const intervalTime = 1500;
@@ -24,6 +25,7 @@ function goToPrevSlide() {
 onMounted(() => {
     setInterval(goToNextSlide, intervalTime);
 });
+
 </script>
 
 <template>
@@ -81,6 +83,7 @@ onMounted(() => {
     </section><!--final banner-->
     <ProductsView/>
     <aboutusView/>
+    <Footer/>
 
 </template>
 

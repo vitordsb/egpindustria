@@ -1,6 +1,5 @@
 <script setup>
 import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -10,7 +9,6 @@ import Footer from './components/Footer.vue';
         <component :is="Component" :key="$route.fullPath"/>
       </router-view>
     </transition>
-  <Footer/>
 </template>
 
 <style>
