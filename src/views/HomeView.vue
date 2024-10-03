@@ -1,10 +1,8 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router' 
-import ProductsView from './ProductsView.vue';
-import aboutusView from './aboutusView.vue';
 import Footer from '@/components/Footer.vue';
-const track = ref(null);  
+const track = ref(null);
 const currentIndex = ref(0);
 const intervalTime = 1500;
 const totalSlides = 4;  
@@ -18,10 +16,7 @@ function goToNextSlide() {
     currentIndex.value = (currentIndex.value + 1) % totalSlides;
     updateCarousel();
 }
-function goToPrevSlide() {
-    currentIndex.value = (currentIndex.value - 1 + totalSlides) % totalSlides;
-    updateCarousel();
-}
+
 onMounted(() => {
     setInterval(goToNextSlide, intervalTime);
 });
@@ -81,8 +76,6 @@ onMounted(() => {
                 <button>ENG</button>
             </div>
     </section><!--final banner-->
-    <ProductsView/>
-    <aboutusView/>
     <Footer/>
 
 </template>

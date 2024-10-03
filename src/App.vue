@@ -4,9 +4,11 @@ import Header from './components/Header.vue';
 
 <template>
   <Header/>
-    <transition name="route" mode="out-in">
+    <transition name="router" mode="out-in">
       <router-view v-slot="{Component}">
-        <component :is="Component" :key="$route.fullPath"/>
+        <component :is="Component" :key="$router.fullPath">
+          {{Component}}
+        </component>
       </router-view>
     </transition>
 </template>

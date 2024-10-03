@@ -1,11 +1,8 @@
 <script>
 import { RouterLink } from 'vue-router'
-
-
 export function abrirTodosProdutos() {
   const botao = document.getElementById("botao-vejamais");
   const background = document.querySelector('.background');
-  //Pegar o elemento da div que vai abrir todos os produtos
   const divTodosProdutos = document.getElementById("container-produtos-view");
   if (divTodosProdutos.style.display === "none") {
     botao.style.display = "none";
@@ -13,17 +10,18 @@ export function abrirTodosProdutos() {
     divTodosProdutos.style.display = "flex";
     divTodosProdutos.style.flexWrap = "wrap";
     divTodosProdutos.style.justifyContent = "center";
-  } else {
+  }
+  else {
     divTodosProdutos.style.display = "flex";
     divTodosProdutos.style.flexWrap = "wrap";
     divTodosProdutos.style.justifyContent = "center";
     botao.style.display = "none";
     background.style.marginTop = "550px"; 
   }
-  
 }
 
 export default {
+  name: 'ProductsView',
   components: {
     RouterLink
   },
@@ -36,22 +34,17 @@ export default {
 
 <template>
     <section class="portifolio">
-        <div class="titulo">
-            <h1>Fique por dentro das novidades</h1>
-        </div>
-        <div id="container-produtos-evp">
+          <div class="titulo">
+              <h1>Fique por dentro das novidades</h1>
+          </div>
+        <div id="container-produtos-evp"ref="produtosContainer">
             <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
                 <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
-                    <div class="botao-saibamais" id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload">Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload">Ver manual</div>
-                    </a> 
-                </div>
+                    <div id="botao-saibamais"> 
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div> <!--final primeiro produto-->
                 
@@ -60,13 +53,8 @@ export default {
                 <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP GUARD ON</span>
                     <div id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload"> Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload"> Ver manual</div>
-                    </a> 
-                </div>
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div><!--Final segundo produto-->
 
@@ -75,13 +63,8 @@ export default {
                 <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
                     <div id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload"> Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload"> Ver manual</div>
-                    </a> 
-                </div>
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div><!--Final terceiro produto-->
 
@@ -89,13 +72,8 @@ export default {
                 <div id="container-pagina-divs-produtos-evp">
                     <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
                     <span id="titulo-do-produto"> SIRENES </span>
-                    <div class="botao-saibamais" id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload">Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload">Ver manual</div>
-                        </a> 
+                    <div id="botao-saibamais"> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div> <!--final quarto produto-->
@@ -105,12 +83,7 @@ export default {
                     <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
                     <span id="titulo-do-produto">CONTROLES </span>
                     <div id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload"> Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload"> Ver manual</div>
-                        </a> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div><!--Final quinto produto-->
@@ -120,37 +93,23 @@ export default {
                     <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
                     <span id="titulo-do-produto"> HASTES </span>
                     <div id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload"> Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload"> Ver manual</div>
-                        </a> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div><!--Final sexto produto-->
-
         </div><!--final de todos os produtos-->
-
             <div class="vejamais">
-
                 <button v-on:click="abrirTodosProdutos" id="botao-vejamais">Ver catálogo completo</button>
-
             </div>
-          
+
         <div id="container-produtos-view">
             <div id="container-pagina-produtos-evp"> 
                 <div id="container-pagina-divs-produtos-evp">
                 <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
-                    <div class="botao-saibamais" id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload">Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload">Ver manual</div>
-                    </a> 
-                </div>
+                    <div id="botao-saibamais"> 
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div> <!--final primeiro produto-->
                 
@@ -159,13 +118,8 @@ export default {
                 <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> EGP GUARD ON</span>
                     <div id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload"> Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload"> Ver manual</div>
-                    </a> 
-                </div>
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div><!--Final segundo produto-->
 
@@ -174,13 +128,8 @@ export default {
                 <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
                 <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
                     <div id="botao-saibamais"> 
-                    <a href="">
-                        <div class="botaodownload"> Ver Especificações</div>
-                    </a>
-                    <a href="#">
-                        <div class="botaodownload"> Ver manual</div>
-                    </a> 
-                </div>
+                        <button class="botaodownload">Especificações</button>
+                    </div>
                 </div>
                 </div><!--Final terceiro produto-->
 
@@ -188,13 +137,8 @@ export default {
                 <div id="container-pagina-divs-produtos-evp">
                     <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
                     <span id="titulo-do-produto"> SIRENES </span>
-                    <div class="botao-saibamais" id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload">Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload">Ver manual</div>
-                        </a> 
+                    <div id="botao-saibamais"> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div> <!--final quarto produto-->
@@ -204,12 +148,7 @@ export default {
                     <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
                     <span id="titulo-do-produto">CONTROLES </span>
                     <div id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload"> Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload"> Ver manual</div>
-                        </a> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div><!--Final quinto produto-->
@@ -219,12 +158,7 @@ export default {
                     <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
                     <span id="titulo-do-produto"> HASTES </span>
                     <div id="botao-saibamais"> 
-                        <a href="">
-                            <div class="botaodownload"> Ver Especificações</div>
-                        </a>
-                        <a href="#">
-                            <div class="botaodownload"> Ver manual</div>
-                        </a> 
+                        <button class="botaodownload">Especificações</button>
                     </div>
                     </div>
                 </div><!--Final sexto produto-->
@@ -241,7 +175,7 @@ export default {
   width: 1500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 80px;
+  margin-top: 15px;
   @media (max-width: 1280px) {
     margin-left: auto;
     margin-right: auto;
@@ -364,6 +298,6 @@ a{
 
 #container-produtos-view{
   display: none;
-
+  
 }
 </style>

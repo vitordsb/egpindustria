@@ -4,6 +4,7 @@ import ProductsView from "@/views/ProductsView.vue";
 import ClientView from "@/views/ClientView.vue";
 import aboutusView from "@/views/aboutusView.vue";
 import BotView from "../../bot/views/BotView.vue";
+import ManualView from "@/views/ManualView.vue";
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: "/electrabot",
     name: "electrabot",
     component: BotView,
+  },
+  {
+    path: "/manuais",
+    name: "manuaisegp",
+    component: ManualView,
   },
 ];
 

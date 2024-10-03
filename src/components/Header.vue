@@ -16,6 +16,7 @@ import { RouterLink } from 'vue-router'
                 <RouterLink to="/manuais">Manuais</RouterLink>
                 <RouterLink to="/sobrenos">Sobre-nós</RouterLink>
                 <RouterLink to="/contact">Contato</RouterLink>
+                <RouterLink to="/contact">Login</RouterLink>
             </div>
         </div> <!--Final midleside-->
 
@@ -40,7 +41,7 @@ import { RouterLink } from 'vue-router'
 
 .header {
     z-index: 999;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
