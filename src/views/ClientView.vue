@@ -149,21 +149,21 @@ export default {
     display: flex;
     justify-content: center;
     height: 750px;
-    margin-bottom: 30px;
 }
 
 .container{
+    top: 5%;
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 40px;
     position: relative;
-    background-color: #417A8B;
+    background-color: #75b1c4;
     padding: 110px 0;
     max-width: 1200px;
     box-shadow: #3e6e7d 2px 2px 2px;
     width: 1300px;
-    border-radius: 20px;
-    height: 500px;
+    border-radius: 10px;
+    height: auto;
 }
 
 .img{
@@ -174,9 +174,9 @@ export default {
 .tela-cadastro{
     background-color: white;
     display: flex;
-    padding: 50px;
-    border-radius: 20px;
-    height: 400px;
+    padding: 60px;
+    border-radius: 10px;
+    height: 420px;
     align-items: center;
 }
 
@@ -187,8 +187,7 @@ form{
 
 form h2{
     font-size: 3rem;
-    text-transform: uppercase;
-    margin: 15px 0;
+    margin-bottom: 5px;
     color: rgb(63, 61, 86);
 }
 
@@ -196,7 +195,7 @@ form h2{
     display: grid;
     grid-template-columns: 7% 93%;
     margin: 20px 0;
-    padding: 4px 0;
+    padding: 5px 0;
     border-bottom: 2px solid #d9d9d9;
     transition: all .5s;
 }
@@ -246,11 +245,12 @@ form h2{
 .btn{
     font-family: 'Poppins', sans-serif;
     display: block;
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    margin: 1rem 0;
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+    margin: 2.5rem auto 1rem auto;
     font-size: 1.2rem;
+    font-weight: bold;
     outline: none;
     border: none;
     cursor: pointer;

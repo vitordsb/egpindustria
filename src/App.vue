@@ -13,7 +13,7 @@ import Header from './components/Header.vue';
     </transition>
 </template>
 
-<style>
+<style scoped> 
 /* Animação de entrada */
 .route-enter-from {
   opacity: 0;

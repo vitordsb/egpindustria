@@ -29,45 +29,74 @@ onMounted(() => {
             <div class="carousel">
 
                 <div class="carousel-track" ref="track">
+
                     <div class="carousel-slide">
                         <img src="/public/images/products/12Vimagem.png">
-                    </div>
-                    
-                    <div class="carousel-slide">
-                        <img src="/public/images/products/12nobreak.png">
+                        <h1>Centrais EGP</h1>
                     </div>
 
                     <div class="carousel-slide">
                         <img src="/public/images/products/controles.png">
+                        <h1>Controles EGP</h1>
                     </div>
 
                     <div class="carousel-slide">
                         <img src="/public/images/products/SirenePiezzo.png">
+                        <h1>Sirenes EGP</h1>
                     </div>
+
+                    <div class="carousel-slide">
+                        <img src="/public/images/products/hastes.png">
+                        <h1>Hastes EGP</h1>
+                    </div>
+
                 </div>
             </div><!--Final Carrousel-->
 
         </div><!--Final campos-->
             <div class="infos">
-              <h1>GRUPO EGP</h1>
-                <p>Venha conheceer a EGP</p>
-                  <RouterLink to="/electrabot">
-                    <button class="botoes">
-                      <h5>Atendimento Virtual</h5>
+
+              <div class="letras">
+
+                <div class="logo">
+                  <img src="../../public/images/IconeEGP.png" alt="">
+                  <h1>GRUPO EGP</h1>
+                </div>
+
+                <p>Veja nossas novidades!</p>
+              </div>
+                
+                 <div class="links">
+                   <RouterLink to="/products">
+                     <button class="botoes">
+                       <h5>Ver produtos</h5> 
+                     </button>
+                   </RouterLink>
+                   
+                   <RouterLink to="/sejacliente">
+                     <button class="botoes"> 
+                       <h5>Ver manuais</h5>
+                     </button>
+                   </RouterLink>
+                   
+                   <RouterLink to="/sejacliente">
+                     <button class="botoes"> 
+                       <h5>Seja nosso cliente</h5>
                     </button>
                   </RouterLink>
 
                   <RouterLink to="/sejacliente">
                     <button class="botoes"> 
-                      <h5>Seja nosso cliente</h5>
+                      <h5>Seja nosso fornecedor</h5>
                     </button>
                   </RouterLink>
-
-                  <RouterLink to="/products">
-                    <button class="botoes">
-                      <h5>Ver produtos</h5> 
-                    </button>
-                  </RouterLink>
+                  
+                  <RouterLink to="/electrabot">
+                   <button class="botoes">
+                     <h5>Atendimento Virtual</h5>
+                   </button>
+                 </RouterLink>
+                 </div>
             </div>
 
             <div class="language">
@@ -81,6 +110,23 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.logo h1 {
+  font-size: 110px;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-top: 5px;
+  width: 100px;
+  height: 90px;
+}
 .banner {
   background-image: url(../images/background.jpg);
   width: auto;
@@ -93,21 +139,22 @@ onMounted(() => {
     height: 880px;
   }
 }
+
+.links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 510px;
+}
 .infos {
   margin-left: 40px;
   color: white;
 }
-.infos h1 {
-  font-size: 110px;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  @media (max-width: 1920px) {
-    font-size: 80px;
-  }
-}
 .infos p {
-  font-size: 45px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 65px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .campos {
     margin-left: 350px;
@@ -138,8 +185,15 @@ onMounted(() => {
   min-width: 100%; /* Cada slide ocupa toda a largura */
   box-sizing: border-box;
   text-align: center;
+
 }
   
+.carousel-slide h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
 .carousel-slide img {
   width: auto;
   max-width: 100%;
@@ -150,12 +204,9 @@ onMounted(() => {
     height: 300px;
   }
 }
-.infos {
-  margin-top: -10px;
-}
+
 .botoes {
-  margin-top: 15px;
-  display: grid;
+  margin-top: 5px;
   align-items: center;
   border: none;
   gap: 10px;
@@ -168,7 +219,7 @@ onMounted(() => {
   background-color: #DB0E69;
 }
 .botoes h5 {
-  font-size: 18px;
+  font-size: 20px;
 }
   
 
@@ -197,6 +248,6 @@ onMounted(() => {
 .language button:hover{
   background-color: #7c8287;
   color: white;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 </style>

@@ -10,4 +10,8 @@
     font-family: "Joan", serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
+
+a {
+    text-decoration: none;
+}

@@ -35,7 +35,6 @@
                 </div>
             </div>
 
-
             <div class="ladodireito">
                 <div class="location">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.127846362447!2d-46.856928223916114!3d-23.599747478773477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cfaa8e02789c3d%3A0x98c3dab76d9da073!2sR.%20Indochina%2C%20159%20-%20Jardim%20Fontana%2C%20Cotia%20-%20SP%2C%2006713-030!5e0!3m2!1spt-BR!2sbr!4v1727577947749!5m2!1spt-BR!2sbr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -44,7 +43,7 @@
     </footer><!--FInal footer-->
 </template>
 
-<style>
+<style scoped>
 .footer-distributed{
     background-color: #292a2d;
     box-sizing: border-box;

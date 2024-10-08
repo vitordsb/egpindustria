@@ -9,7 +9,7 @@
                  <h1>Manual das centrais de choque</h1>
                 </div>
                 
-            <div class="bloco1">
+            <div class="blocos">
                 
                 <Card title="Central 12V" subtitle="Eletrificador 12.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
 
@@ -29,7 +29,7 @@
                  <h1>Manual das centrais de choque</h1>
                 </div>
                 
-            <div class="bloco1">
+            <div class="blocos">
 
                 <Card title="Central 12V" subtitle="Eletrificador 12.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
 
@@ -46,7 +46,6 @@
             
 
      </div><!-- Final container -->
-    <Footer/>
 </template>
 
 <script>
@@ -68,24 +67,31 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 auto;
 }
-.bloco1 {
+.sirenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blocos {
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    gap: 50px;
+    gap: 30px;
 }
 .background {
-    height: 1592px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 50px;
     align-items: center;
 }
+.links {
+    gap: 10px;
+}
 
 .card {
   width: 18rem;
+  height: 11rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -98,30 +104,27 @@ export default {
 }
 
 .card-title {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 .card-subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #6c757d;
   margin-bottom: 1rem;
 }
 
 .card-text {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.0rem;
 }
 
 .card-link {
   font-size: 0.9rem;
+  font-weight: bolder;
   color: #DB0E69;
   text-decoration: none;
   margin-right: 1rem;
-}
-
-.card-link:hover {
-  text-decoration: underline;
 }
 
 .titulo {

@@ -1,20 +1,32 @@
 <script>
 import { RouterLink } from 'vue-router'
+import { Produtos } from '../components/Produtos.jsx';
+
+export function animacaoDeTransicao() {
+  const divTodosProdutos = document.getElementById("container-produtos-view");
+  if (!divTodosProdutos.classList.contains("ativo")) {
+    divTodosProdutos.classList.add("ativo");
+    divTodosProdutos.style.height = "auto";
+  } else {
+    divTodosProdutos.classList.remove("ativo");
+    divTodosProdutos.style.height = "0px";
+  }
+}
+
 export function abrirTodosProdutos() {
   const botao = document.getElementById("botao-vejamais");
   const background = document.querySelector('.background');
+  
+  animacaoDeTransicao()
+  
   const divTodosProdutos = document.getElementById("container-produtos-view");
+  
   if (divTodosProdutos.style.display === "none") {
     botao.style.display = "none";
     background.style.marginTop = "0px";
     divTodosProdutos.style.display = "flex";
-    divTodosProdutos.style.flexWrap = "wrap";
-    divTodosProdutos.style.justifyContent = "center";
   }
   else {
-    divTodosProdutos.style.display = "flex";
-    divTodosProdutos.style.flexWrap = "wrap";
-    divTodosProdutos.style.justifyContent = "center";
     botao.style.display = "none";
     background.style.marginTop = "550px"; 
   }
@@ -23,10 +35,12 @@ export function abrirTodosProdutos() {
 export default {
   name: 'ProductsView',
   components: {
-    RouterLink
+    RouterLink,
+    Produtos,
   },
   methods: {
     abrirTodosProdutos,
+    animacaoDeTransicao,
   }
 }
 
@@ -35,133 +49,43 @@ export default {
 <template>
     <section class="portifolio">
           <div class="titulo">
-              <h1>Fique por dentro das novidades</h1>
+              <h1>Lançamentos EGP 2024 !!!</h1>
           </div>
+          
         <div id="container-produtos-evp"ref="produtosContainer">
-            <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div> <!--final primeiro produto-->
+
+          
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
                 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> EGP GUARD ON</span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div><!--Final segundo produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div><!--Final terceiro produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
-                    <span id="titulo-do-produto"> SIRENES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div> <!--final quarto produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
-                    <span id="titulo-do-produto">CONTROLES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div><!--Final quinto produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
-                    <span id="titulo-do-produto"> HASTES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div><!--Final sexto produto-->
-        </div><!--final de todos os produtos-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+
+              </div><!--final de todos os produtos-->
+                
             <div class="vejamais">
                 <button v-on:click="abrirTodosProdutos" id="botao-vejamais">Ver catálogo completo</button>
             </div>
 
         <div id="container-produtos-view">
-            <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> EGP PLUG IN WIFI </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div> <!--final primeiro produto-->
+
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
                 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12nobreak.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> EGP GUARD ON</span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div><!--Final segundo produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                <img src="/public/images/products/12Vimagem.png" id="container-pagina-imagens-produtos-evp" >
-                <span id="titulo-do-produto"> MÓDULO WIFI EGP </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                </div>
-                </div><!--Final terceiro produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/SireneStrobo.png" id="container-pagina-imagens-produtos-evp">
-                    <span id="titulo-do-produto"> SIRENES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div> <!--final quarto produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/controles.png" id="container-pagina-imagens-produtos-evp" >
-                    <span id="titulo-do-produto">CONTROLES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div><!--Final quinto produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <div id="container-pagina-produtos-evp"> 
-                <div id="container-pagina-divs-produtos-evp">
-                    <img src="/public/images/products/hastes.png" id="container-pagina-imagens-produtos-evp" >
-                    <span id="titulo-do-produto"> HASTES </span>
-                    <div id="botao-saibamais"> 
-                        <button class="botaodownload">Especificações</button>
-                    </div>
-                    </div>
-                </div><!--Final sexto produto-->
+                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
         </div><!--final de todos os produtos-->
 
@@ -170,9 +94,10 @@ export default {
 </template>
 
 <style>
+
 .portifolio {
   height: 850px;
-  width: 1500px;
+  width: 1920px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -183,12 +108,12 @@ export default {
 }
 .titulo {
   text-align: center;
-  font-size: 40px;
-  background-color: #5B9FC9;
-  width: 60%;
+  width: 550px;
+  font-size: 25px;
+  background-color: #DB0E69;
   color: white;
   border-radius: 10px;
-  box-shadow: #b3b3b3 2px 2px 2px 2px;
+  box-shadow: #b3b3b3 1px 1px 1px 1px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -207,12 +132,12 @@ export default {
   }
 }
 #container-pagina-produtos-evp{
-  width: 400px;
+  width: 270px;
   border-radius: 10px;
   height: 290px;
   border: #babdc6 2px solid;
   box-shadow: #bbbfc6 1px 1px 1px 1px;
-  margin: 20px;
+  margin: 10px;
   background-color: transparent;
   transition: calc(.2s);
   @media (max-width: 1280px) {
@@ -228,10 +153,10 @@ export default {
   gap: 5px;
 }
 #container-pagina-produtos-evp:hover {
-  background-color: #5b9fc9;
+  background-color: #8acaf1;
   transform: scale(1.025);
   border: #000000 2px solid;
-  box-shadow: #000000 1px 2px 2px 1px;
+  box-shadow: #000000 1px 1px 1px;
 }
 #container-pagina-imagens-produtos-evp{
   width: auto;
@@ -254,7 +179,7 @@ export default {
 .botaodownload {
   height: 40px;
   padding: 5px;
-  background: #DB0E69;  
+  background: #5b9fc9;  
   font-family: arial;
   text-align: center;
   color: white;
@@ -264,7 +189,7 @@ export default {
   transition: calc(.2s);
 }
 .botaodownload:hover {
-  background-color: #a71456;
+  background-color: #315b75;
   color: white;
 }
 a{
@@ -296,8 +221,15 @@ a{
   transform: scale(1.025);
 }
 
-#container-produtos-view{
-  display: none;
-  
+#container-produtos-view {
+  flex-wrap: wrap;
+  justify-content: center;
+  display: none; /* Oculto inicialmente */
+  opacity: 0;    /* Invisível inicialmente */
+  transition: opacity 0.5s ease, height 0.5s ease; /* Transição suave para opacidade e altura */
+}
+#container-produtos-view.ativo {
+  opacity: 1;   /* Aparece gradualmente */
+  display: flex; /* Mostra o container */
 }
 </style>

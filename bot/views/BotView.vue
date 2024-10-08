@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <main class="background">
+  <main class="fundo">
     <div class="container">
       <div class="media">
         <img src="/public/images/IconeEGP.png" class="image" width="45px" alt="...">
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style>
-.background {
+.fundo {
   margin-top: 10px;
   height: 850px;
   margin-bottom: 40px;
