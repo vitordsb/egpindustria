@@ -2,6 +2,7 @@
 import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router' 
 import Footer from '@/components/Footer.vue';
+import aboutusView from './aboutusView.vue';
 const track = ref(null);
 const currentIndex = ref(0);
 const intervalTime = 1500;
@@ -29,51 +30,37 @@ onMounted(() => {
             <div class="carousel">
 
                 <div class="carousel-track" ref="track">
-
                     <div class="carousel-slide">
                         <img src="/public/images/products/12Vimagem.png">
-                        <h1>Centrais EGP</h1>
                     </div>
-
                     <div class="carousel-slide">
                         <img src="/public/images/products/controles.png">
-                        <h1>Controles EGP</h1>
                     </div>
-
                     <div class="carousel-slide">
                         <img src="/public/images/products/SirenePiezzo.png">
-                        <h1>Sirenes EGP</h1>
                     </div>
-
                     <div class="carousel-slide">
                         <img src="/public/images/products/hastes.png">
-                        <h1>Hastes EGP</h1>
                     </div>
-
                 </div>
             </div><!--Final Carrousel-->
-
         </div><!--Final campos-->
             <div class="infos">
-
               <div class="letras">
-
                 <div class="logo">
                   <img src="../../public/images/IconeEGP.png" alt="">
                   <h1>GRUPO EGP</h1>
                 </div>
-
                 <p>Veja nossas novidades!</p>
               </div>
-                
                  <div class="links">
                    <RouterLink to="/products">
                      <button class="botoes">
                        <h5>Ver produtos</h5> 
                      </button>
                    </RouterLink>
-                   
-                   <RouterLink to="/sejacliente">
+              
+                   <RouterLink to="/manuais">
                      <button class="botoes"> 
                        <h5>Ver manuais</h5>
                      </button>
@@ -85,7 +72,7 @@ onMounted(() => {
                     </button>
                   </RouterLink>
 
-                  <RouterLink to="/sejacliente">
+                  <RouterLink to="/sejafornecedor">
                     <button class="botoes"> 
                       <h5>Seja nosso fornecedor</h5>
                     </button>
@@ -106,6 +93,7 @@ onMounted(() => {
             </div>
     </section><!--final banner-->
     <Footer/>
+
 
 </template>
 

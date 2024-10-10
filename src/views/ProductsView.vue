@@ -16,7 +16,7 @@ export function animacaoDeTransicao() {
 export function abrirTodosProdutos() {
   const botao = document.getElementById("botao-vejamais");
   const background = document.querySelector('.background');
-  
+  const botao2 = document.querySelector("#vermenos")
   animacaoDeTransicao()
   
   const divTodosProdutos = document.getElementById("container-produtos-view");
@@ -28,20 +28,42 @@ export function abrirTodosProdutos() {
   }
   else {
     botao.style.display = "none";
+    botao2.style.display = "flex";
     background.style.marginTop = "550px"; 
   }
 }
+export function fecharTodosProdutos() {
+  const botao2 = document.querySelector("#vermenos")
+  const divTodosProdutos = document.getElementById("container-produtos-view");
+  const background = document.querySelector('.background');
+  const botao = document.getElementById("botao-vejamais");
+  animacaoDeTransicao()
+
+  if (divTodosProdutos.style.display === "flex") {
+    botao2.style.display = "none";
+    background.style.marginTop = "0px";
+    divTodosProdutos.style.display = "none";
+  }
+  else {
+    botao2.style.display = "none";
+    botao.style.display = "flex";
+    background.style.marginTop = "550px"; 
+  }
+}
+
 
 export default {
   name: 'ProductsView',
   components: {
     RouterLink,
     Produtos,
+
   },
   methods: {
     abrirTodosProdutos,
     animacaoDeTransicao,
-  }
+    fecharTodosProdutos,
+  },
 }
 
 </script>
@@ -49,23 +71,24 @@ export default {
 <template>
     <section class="portifolio">
           <div class="titulo">
-              <h1>Lançamentos EGP 2024 !!!</h1>
+              <img src="/public/images/IconeEGP.png" alt="">
+              <h1>Lançamentos EGP <span>2024</span></h1>
           </div>
           
         <div id="container-produtos-evp"ref="produtosContainer">
 
           
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="EGP PLUG IN WIFI" img="/public/images/products/12Vimagem.png" specific="/public/images/products/12nobreak.pdf" />
                 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="EGP GUARD ON" img="/public/images/products/SirenePiezzo.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="MODULO WIFI" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="SIRENE STROBO" img="/public/images/products/SireneStrobo.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="CONTROLE COPIADOR" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="CONTROLE 4 BOTÕES" img="/public/images/products/controles.png" specific="/public/images/products/12nobreak.pdf" />
 
               </div><!--final de todos os produtos-->
                 
@@ -75,7 +98,7 @@ export default {
 
         <div id="container-produtos-view">
 
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+                <Produtos title="Haste Quadrada" img="/public/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
                 
                 <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
@@ -87,14 +110,35 @@ export default {
 
                 <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
 
-        </div><!--final de todos os produtos-->
+                
+              </div><!--final de todos os produtos-->
+              <button id="vermenos" v-on:click="fecharTodosProdutos"> Ver menos</button>
 
         
     </section> <!--final portifolio-->
 </template>
 
 <style>
-
+#vermenos{
+  display: none;
+  background-color: #3C6D7E;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 17px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: calc(.2s);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#vermenos:hover {
+  background-color: #5b9fc9;
+  color: white;
+  transform: scale(1.025);
+}
 .portifolio {
   height: 850px;
   width: 1920px;
@@ -106,14 +150,23 @@ export default {
     margin-right: auto;
   }
 }
+
+.titulo h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  width: 550px;
+  height: 40px;
+  gap: 20px;
+  width: 500px;
   font-size: 25px;
-  background-color: #DB0E69;
-  color: white;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
-  box-shadow: #b3b3b3 1px 1px 1px 1px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -121,6 +174,15 @@ export default {
     font-size: 25px;
     margin-bottom: 30px;
   }
+}
+.titulo span {
+  font-weight: bolder;
+  
+  color: #DB0E69;
+  font-size: 60px;
+}
+.titulo img {
+  width: 80px;
 }
 #container-produtos-evp{
   display: flex;
@@ -179,7 +241,7 @@ export default {
 .botaodownload {
   height: 40px;
   padding: 5px;
-  background: #5b9fc9;  
+  background: #DB0E69;  
   font-family: arial;
   text-align: center;
   color: white;
@@ -189,7 +251,7 @@ export default {
   transition: calc(.2s);
 }
 .botaodownload:hover {
-  background-color: #315b75;
+  background-color: #a7054e;
   color: white;
 }
 a{
@@ -226,9 +288,9 @@ a{
   justify-content: center;
   display: none; /* Oculto inicialmente */
   opacity: 0;    /* Invisível inicialmente */
-  transition: opacity 0.5s ease, height 0.5s ease; /* Transição suave para opacidade e altura */
 }
 #container-produtos-view.ativo {
+  transition: opacity 0.5s ease-in-out;
   opacity: 1;   /* Aparece gradualmente */
   display: flex; /* Mostra o container */
 }

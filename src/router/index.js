@@ -1,42 +1,40 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-import ProductsView from "@/views/ProductsView.vue";
-import ClientView from "@/views/ClientView.vue";
-import aboutusView from "@/views/aboutusView.vue";
-import BotView from "../../bot/views/BotView.vue";
-import ManualView from "@/views/ManualView.vue";
-
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: HomeView,
+    component: () => import("/src/views/HomeView.vue")
   },
   {
     path: "/products",
     name: "products",
-    component: ProductsView,
+    component: () => import("/src/views/ProductsView.vue"),
   },
   {
     path: "/sejacliente",
     name: "formulaio",
-    component: ClientView,
+    component: () => import("/src/views/ClientView.vue"),
   },
   {
     path: "/sobrenos",
     name: "sobrenos",
-    component: aboutusView,
+    component: () => import("/src/views/aboutusView.vue"),
   },
   {
     path: "/electrabot",
     name: "electrabot",
-    component: BotView,
+    component: () => import("/bot/views/BotView.vue"),
   },
   {
     path: "/manuais",
     name: "manuaisegp",
-    component: ManualView,
+    component: () => import("/src/views/ManualView.vue"),
   },
+  {
+    path: "/sejafornecedor",
+    name : "sejafornecedor",
+    component: () => import("/src/views/FornecedorView.vue"),
+  }
 ];
 
 const router = createRouter({
