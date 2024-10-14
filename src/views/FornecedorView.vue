@@ -6,6 +6,7 @@ import VoltarIcon from '../components/icons/VoltarIcon.vue';
 import PredioIcon from '../components/icons/PredioIcon.vue';
 import EnvelopeIcon from '../components/icons/EnvelopeIcon.vue';
 import MensagemIcon from '../components/icons/MensagemIcon.vue';
+
 export default {
     name: 'ClientView',
     //importando os icones
@@ -148,7 +149,7 @@ export default {
                     </div>
 
 
-                    <input class="btn" type="submit" value="Cadastar">
+                    <button class="btn" value="Cadastar">Cadastrar</button>
                 </form>
                 
             </div>

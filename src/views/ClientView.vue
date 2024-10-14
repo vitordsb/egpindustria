@@ -137,7 +137,7 @@ export default {
                             <input class="input" type="text" v-model="cep" @input="formatarCEP" placeholder="CEP:">
                         </div>
                     </div>
-                    <input class="btn" type="submit" value="Cadastar">
+                    <input class="btn" value="Cadastar">
                 </form>
             </div>
         </div>

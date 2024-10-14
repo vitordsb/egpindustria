@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router' 
 import Footer from '@/components/Footer.vue';
 import aboutusView from './aboutusView.vue';
+
 const track = ref(null);
 const currentIndex = ref(0);
 const intervalTime = 1500;
@@ -91,8 +92,8 @@ onMounted(() => {
                 <button>ES</button>
                 <button>ENG</button>
             </div>
-    </section><!--final banner-->
-    <Footer/>
+          </section><!--final banner-->
+          <aboutusView/>
 
 
 </template>

@@ -1,6 +1,6 @@
 <script>
 import { RouterLink } from 'vue-router'
-import { Produtos } from '../components/Produtos.jsx';
+import { Produtos } from '../components/jsx/Produtos.jsx';
 
 export function animacaoDeTransicao() {
   const divTodosProdutos = document.getElementById("container-produtos-view");
@@ -116,6 +116,7 @@ export default {
 
         
     </section> <!--final portifolio-->
+    
 </template>
 
 <style>
@@ -141,7 +142,7 @@ export default {
 }
 .portifolio {
   height: 850px;
-  width: 1920px;
+  width: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -215,7 +216,7 @@ export default {
   gap: 5px;
 }
 #container-pagina-produtos-evp:hover {
-  background-color: #8acaf1;
+  background-color: #70c4f8;
   transform: scale(1.025);
   border: #000000 2px solid;
   box-shadow: #000000 1px 1px 1px;
@@ -239,15 +240,15 @@ export default {
   justify-content: center;
 }
 .botaodownload {
-  height: 40px;
+  height: 20px;
   padding: 5px;
+  font-weight: bolder ;
   background: #DB0E69;  
   font-family: arial;
   text-align: center;
   color: white;
-  font-size: 17px;
-  line-height: 40px;
-  border-radius: 10px;
+  font-size: 18px;
+  border-radius: 5px;
   transition: calc(.2s);
 }
 .botaodownload:hover {

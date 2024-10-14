@@ -1,4 +1,5 @@
 <script setup>
+import Footer from './components/Footer.vue';
 import Header from './components/Header.vue';
 </script>
 
@@ -11,10 +12,10 @@ import Header from './components/Header.vue';
         </component>
       </router-view>
     </transition>
+    <Footer/>
 </template>
 
-<style scoped> 
-/* Animação de entrada */
+<style> 
 .route-enter-from {
   opacity: 0;
   transform: translateX(10px);
@@ -22,9 +23,8 @@ import Header from './components/Header.vue';
 .route-enter-active {
   transition: all 0.5s ease-out;
 }
-/* Animação de saída */
 .route-leave-to {
-  opacity: 0; /* Fading out ao sair */
+  opacity: 0;
   transform: translateX(-10px);
 }
 .route-leave-active {

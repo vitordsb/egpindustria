@@ -171,13 +171,12 @@ export default {
   margin-bottom: 5px;
   border-radius: 0px 0px 10px 10px;
   background-color: rgb(249, 249, 249);
-  overflow-y: auto; /* Adiciona rolagem */
+  overflow-y: auto;
   padding: 10px;
   display: flex;
   flex-direction: column;
 }
 
-/* Estilo das mensagens do usuário */
 .user-message {
   max-width: 100%;
   text-align: right;

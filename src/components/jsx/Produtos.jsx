@@ -7,7 +7,7 @@ export const Produtos = ({ title, img, specific }) => {
             <span id="titulo-do-produto">{title}</span>
             <div id="botao-saibamais">
               <a href={specific} class="botaodownload">
-                Especificações
+                Ver especificações
               </a>
             </div>
           </div>

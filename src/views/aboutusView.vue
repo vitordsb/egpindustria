@@ -76,7 +76,7 @@
         </div> <!--Final background-->
 </template>
 
-<style>
+<style scoped>
 
 .flexbox {
     position: relative;

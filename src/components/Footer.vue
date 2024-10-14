@@ -45,6 +45,9 @@
 
 <style scoped>
 .footer-distributed{
+    width: auto;
+    position: sticky;
+    margin-top: 100px;
     background-color: #292a2d;
     box-sizing: border-box;
     widows: 100%;
@@ -52,10 +55,17 @@
     padding: 10px 10px 10px 10px;
     display: flex;
     justify-content: space-around;
+    @media (max-width: 600px) {
+        margin-top: 2000px;
+        padding: 1px 1px 1px 1px;
+    }
 }
 .footer-distributed h1{
     color: white;
     font-size: 40px;
+    @media (max-width: 600px) {
+        font-size: 20px;
+    }
 }
 .footer-distributed .footer-links{
     color: #ffffff;
@@ -84,6 +94,9 @@
     line-height: 42px;
     margin: 10px 15px ;
     vertical-align: middle;
+    @media (max-width: 600px) {
+        font-size: 15px;
+    }
 }
 
 .footer-distributed .footer-center p{
