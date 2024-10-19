@@ -22,7 +22,7 @@
                     </div>
     
                     <div>
-                        <p>(11) 4703-5846</p>
+                        <p>(11)4703-5846</p>
                     </div>
                     
                     <div class="contato">
@@ -47,7 +47,7 @@
 .footer-distributed{
     width: auto;
     position: sticky;
-    margin-top: 100px;
+    margin-top: auto;
     background-color: #292a2d;
     box-sizing: border-box;
     widows: 100%;
@@ -56,8 +56,7 @@
     display: flex;
     justify-content: space-around;
     @media (max-width: 600px) {
-        margin-top: 2000px;
-        padding: 1px 1px 1px 1px;
+        display: none;
     }
 }
 .footer-distributed h1{

@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <main class="fundo">
     <div class="container">
       <div class="media">
@@ -14,13 +13,10 @@
       <!-- Final chatContainer -->
       <div class="input">
         <input type="text" class="form-control" id="textBox" />
-        <button id="sendBtn" type="button" class="btn btn-primary">Enviar</button>
-      </div>
-      <!-- Final input -->
-    </div>
-    <!-- Final container -->
-  </main>
-  <!-- Final background -->
+      <button id="sendBtn" type="button" class="btn btn-primary">Enviar</button>
+      </div><!-- Final input -->
+    </div><!-- Final container -->
+  </main><!--Final background-->
 </template>
 
 <script>
@@ -62,13 +58,30 @@ export default {
   clearInterval(interval);
   chatContainer.removeChild(typingElement);
 
-  if (normalizedUserMessage === "opcoes") {
-    escolher(userMessage);
+  if (normalizedUserMessage === "quero comprar cerca eletrica") {
+    chatBotMessage = "O que deseja?";
+    displayChatBotMessage(chatBotMessage, "blue");
   } else {
     chatBotMessage = result ? result.response : "Desculpe, não entendi o que você quis dizer.";
     displayChatBotMessage(chatBotMessage, result ? "blue" : "red");
   }
-}
+    }
+
+    function opcoes(sendMessage) {
+      switch (sendMessage) {
+        case "quero comprar cerca eletrica":
+          chatBotMessage = "Certo, vou te passar o contato da nossa vendedora\n";
+          displayChatBotMessage(chatBotMessage, "blue");
+          break;
+        case "Quero o contato comercial":
+          chatBotMessage = "Certo, aqui está (11) 95751-9999";
+          displayChatBotMessage(chatBotMessage, "blue");
+          break;
+        default:
+          chatBotMessage = "Desculpe, não entendi o que você quis dizer.";
+          displayChatBotMessage(chatBotMessage, "red");
+      }
+    }
 
 
     function createTypingElement(name) {

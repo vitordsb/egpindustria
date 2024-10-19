@@ -1,8 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router' 
-import Footer from '@/components/Footer.vue';
-import aboutusView from './aboutusView.vue';
 
 const track = ref(null);
 const currentIndex = ref(0);
@@ -52,7 +50,7 @@ onMounted(() => {
                   <img src="../../public/images/IconeEGP.png" alt="">
                   <h1>GRUPO EGP</h1>
                 </div>
-                <p>Veja nossas novidades!</p>
+                <p>A melhor fabricante de eletrificadores.</p>
               </div>
                  <div class="links">
                    <RouterLink to="/products">
@@ -75,7 +73,7 @@ onMounted(() => {
 
                   <RouterLink to="/sejafornecedor">
                     <button class="botoes"> 
-                      <h5>Seja nosso fornecedor</h5>
+                      <h5>Comprar com parceiros</h5>
                     </button>
                   </RouterLink>
                   
@@ -93,9 +91,6 @@ onMounted(() => {
                 <button>ENG</button>
             </div>
           </section><!--final banner-->
-          <aboutusView/>
-
-
 </template>
 
 <style scoped>
@@ -103,29 +98,38 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 10px;
-
+  @media (max-width: 680px) {
+    display: inline;
+  }
 }
 
 .logo h1 {
-  font-size: 110px;
+  font-size: 90px;
   font-weight: bold;
+  color: white;
+  @media (max-width: 680px) {
+    font-size: 50px;
+  }
 }
 
 .logo img {
   margin-top: 5px;
-  width: 100px;
-  height: 90px;
+  width: 90px;
+  height: 80px;
 }
 .banner {
   background-image: url(../images/background.jpg);
   width: auto;
   height: 900px;
-  background-size: cover;
+  background-size: auto;
   display: flex;
   align-items: center;
   border-bottom: #294459 3px solid;
-  @media (max-width: 1280px) {
-    height: 880px;
+  @media (max-width: 680px) {
+    height: 700px;
+    text-align: center;
+    width: auto;
+    flex-direction: column-reverse;
   }
 }
 
@@ -135,13 +139,22 @@ onMounted(() => {
   flex-wrap: wrap;
   gap: 10px;
   width: 510px;
+  @media (max-width: 680px){
+    flex-direction: column;
+    width: auto;
+    margin: auto;
+  }
 }
 .infos {
   margin-left: 40px;
   color: white;
+  @media (max-width: 680px) {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
 }
 .infos p {
-  font-size: 65px;
+  font-size: 35px;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
@@ -152,17 +165,18 @@ onMounted(() => {
     align-items: center;
     height: 90%;
     width: 30%;
-    @media (max-width: 1280px) {
-      margin-left: 320px;
+    @media (max-width:680px) {
+      margin-left: 0;
     }
 }
 .carousel {
   position: relative;
   width: 1920px; /* Largura do carousel */
   overflow: hidden;
-  @media (max-width: 1280px) {
+  @media (max-width: 680px) {
     margin-left: auto;
     margin-right: auto;
+    display: none;
   }
 }
 .carousel-track {
@@ -186,7 +200,7 @@ onMounted(() => {
 .carousel-slide img {
   width: auto;
   max-width: 100%;
-  max-height: 500px;
+  max-height: auto;
   height: auto;
   @media (max-width: 1280px) {
     width: 300px;
@@ -199,9 +213,9 @@ onMounted(() => {
   align-items: center;
   border: none;
   gap: 10px;
-  border-radius: 10px;
-  width: 250px;
-  height: 50px;
+  border-radius: 5px;
+  width: 220px;
+  height: 45px;
   cursor: pointer;
   transition: calc(.4s);
   color: white;
@@ -222,6 +236,9 @@ onMounted(() => {
   position: absolute;
   top: 90px;
   right: 20px;
+  @media (max-width: 680px) {
+    display: none;
+  }
 }
 .language button {
   background-color: transparent;

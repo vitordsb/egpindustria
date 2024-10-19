@@ -1,73 +1,3 @@
-<script>
-import { RouterLink } from 'vue-router'
-import { Produtos } from '../components/jsx/Produtos.jsx';
-
-export function animacaoDeTransicao() {
-  const divTodosProdutos = document.getElementById("container-produtos-view");
-  if (!divTodosProdutos.classList.contains("ativo")) {
-    divTodosProdutos.classList.add("ativo");
-    divTodosProdutos.style.height = "auto";
-  } else {
-    divTodosProdutos.classList.remove("ativo");
-    divTodosProdutos.style.height = "0px";
-  }
-}
-
-export function abrirTodosProdutos() {
-  const botao = document.getElementById("botao-vejamais");
-  const background = document.querySelector('.background');
-  const botao2 = document.querySelector("#vermenos")
-  animacaoDeTransicao()
-  
-  const divTodosProdutos = document.getElementById("container-produtos-view");
-  
-  if (divTodosProdutos.style.display === "none") {
-    botao.style.display = "none";
-    background.style.marginTop = "0px";
-    divTodosProdutos.style.display = "flex";
-  }
-  else {
-    botao.style.display = "none";
-    botao2.style.display = "flex";
-    background.style.marginTop = "550px"; 
-  }
-}
-export function fecharTodosProdutos() {
-  const botao2 = document.querySelector("#vermenos")
-  const divTodosProdutos = document.getElementById("container-produtos-view");
-  const background = document.querySelector('.background');
-  const botao = document.getElementById("botao-vejamais");
-  animacaoDeTransicao()
-
-  if (divTodosProdutos.style.display === "flex") {
-    botao2.style.display = "none";
-    background.style.marginTop = "0px";
-    divTodosProdutos.style.display = "none";
-  }
-  else {
-    botao2.style.display = "none";
-    botao.style.display = "flex";
-    background.style.marginTop = "550px"; 
-  }
-}
-
-
-export default {
-  name: 'ProductsView',
-  components: {
-    RouterLink,
-    Produtos,
-
-  },
-  methods: {
-    abrirTodosProdutos,
-    animacaoDeTransicao,
-    fecharTodosProdutos,
-  },
-}
-
-</script>
-
 <template>
     <section class="portifolio">
           <div class="titulo">
@@ -77,54 +7,81 @@ export default {
           
         <div id="container-produtos-evp"ref="produtosContainer">
 
-          
-                <Produtos title="EGP PLUG IN WIFI" img="/public/images/products/12Vimagem.png" specific="/public/images/products/12nobreak.pdf" />
-                
-                <Produtos title="EGP GUARD ON" img="/public/images/products/SirenePiezzo.png" specific="/public/images/products/12nobreak.pdf" />
+            <Produtos title="EGP Plug IN WI-FI" img="/public/images/products/12Vimagem.png" specific="/pluginView"/>
 
-                <Produtos title="MODULO WIFI" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12Vimagem.png" specific="/guardon"/>
 
-                <Produtos title="SIRENE STROBO" img="/public/images/products/SireneStrobo.png" specific="/public/images/products/12nobreak.pdf" />
+            <Produtos title="Módulo WI-FI" img="/public/images/products/Modulo Wifi.png" specific="/public/images/products/12nobreak.pdf"/>
 
-                <Produtos title="CONTROLE COPIADOR" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
+            <Produtos title="Sirene Strobo" img="/public/images/products/SireneStrobo.png" specific="/public/images/products/12nobreak.pdf"/>
 
-                <Produtos title="CONTROLE 4 BOTÕES" img="/public/images/products/controles.png" specific="/public/images/products/12nobreak.pdf" />
+            <Produtos title="Controle Copiador" img="/public/images/products/Controle 4b copiador.png" specific="/public/images/products/12nobreak.pdf"/>
 
-              </div><!--final de todos os produtos-->
+            <Produtos title="Controle 4 Botões" img="/public/images/products/CONTROLE_4B.png" specific="/public/images/products/12nobreak.pdf"/>
+        </div><!--final container-produtos-evp-->
                 
             <div class="vejamais">
                 <button v-on:click="abrirTodosProdutos" id="botao-vejamais">Ver catálogo completo</button>
             </div>
 
         <div id="container-produtos-view">
-
-                <Produtos title="Haste Quadrada" img="/public/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
-                
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
-
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
-
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
-
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
-
-                <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf" />
-
-                
-              </div><!--final de todos os produtos-->
-              <button id="vermenos" v-on:click="fecharTodosProdutos"> Ver menos</button>
-
-        
+            <Produtos title="Haste Quadrada" img="/public/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>   
+            <Produtos title="EGP GUARD ON" img="/public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>      
+        </div><!--final de todos os produtos-->
+      <button id="vermenos" v-on:click="fecharTodosProdutos">Ver menos</button>
     </section> <!--final portifolio-->
-    
 </template>
 
-<style>
+<script>
+import Produtos from '@/components/MiniComponents/Produtos.vue';
+import { RouterView } from 'vue-router';
+
+export default {
+  name: 'ProductsView',
+  components: {
+    Produtos,
+    RouterView,
+  },
+  methods: {
+    abrirTodosProdutos() {
+      const botao = document.getElementById("botao-vejamais");
+      const botao2 = document.getElementById("vermenos");
+      const divTodosProdutos = document.getElementById("container-produtos-view");
+      botao.style.display = "none";
+      divTodosProdutos.classList.add("ativo");
+      setTimeout(() => {
+        botao2.style.display = "flex";
+        divTodosProdutos.classList.add("ativo");
+      }, 100);// Adiciona a classe que mostra o container
+    },
+    fecharTodosProdutos() {
+      const botao = document.getElementById("botao-vejamais");
+      const botao2 = document.getElementById("vermenos");
+      const divTodosProdutos = document.getElementById("container-produtos-view");
+      divTodosProdutos.classList.remove("ativo"); // Remove a classe para esconder o container
+      setTimeout(() => {
+        divTodosProdutos.classList.remove("ativo");
+        botao.style.display = "flex";
+        botao2.style.display = "none";
+      }, 500);
+    }
+  }
+}
+
+</script>
+
+<style scoped>
+
 #vermenos{
   display: none;
   background-color: #3C6D7E;
   color: white;
-  border: none;
+  margin-top: 15px;
+  border: none; 
   font-weight: bolder;
   font-size: 17px;
   padding: 10px 10px;
@@ -137,18 +94,19 @@ export default {
 }
 #vermenos:hover {
   background-color: #5b9fc9;
-  color: white;
+  color: rgb(0, 0, 0);
   transform: scale(1.025);
 }
 .portifolio {
   height: 850px;
+  background-color: #edf8ff;
   width: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
   @media (max-width: 1280px) {
     margin-left: auto;
     margin-right: auto;
+    height: auto;
   }
 }
 
@@ -162,106 +120,52 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  top: 30px;
+  position: relative;
   height: 40px;
   gap: 20px;
-  width: 500px;
+  width: 600px;
   font-size: 25px;
   color: rgb(0, 0, 0);
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  @media (max-width: 1280px) {
-    font-size: 25px;
+  margin-bottom: 2%;
+  @media (max-width: 680px) {
+    font-size: 15px;
+    gap: 10px;
+    width: auto;
     margin-bottom: 30px;
   }
 }
 .titulo span {
   font-weight: bolder;
-  
   color: #DB0E69;
   font-size: 60px;
+  @media (max-width: 680px) {
+    font-size: 30px;
+  }
 }
 .titulo img {
   width: 80px;
+  @media (max-width: 680px) {
+    width: 50px;
+  }
 }
 #container-produtos-evp{
   display: flex;
-  margin-top: 10px;
+  position: relative;
+  top: 3%;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   @media (max-width: 1280px) {
     
   }
 }
-#container-pagina-produtos-evp{
-  width: 270px;
-  border-radius: 10px;
-  height: 290px;
-  border: #babdc6 2px solid;
-  box-shadow: #bbbfc6 1px 1px 1px 1px;
-  margin: 10px;
-  background-color: transparent;
-  transition: calc(.2s);
-  @media (max-width: 1280px) {
-    width: 370px;
-    margin: 30px;
-  }
-}
-#container-pagina-divs-produtos-evp{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  gap: 5px;
-}
-#container-pagina-produtos-evp:hover {
-  background-color: #70c4f8;
-  transform: scale(1.025);
-  border: #000000 2px solid;
-  box-shadow: #000000 1px 1px 1px;
-}
-#container-pagina-imagens-produtos-evp{
-  width: auto;
-  height: 160px;
-  margin: 20px;  
-}
-#titulo-do-produto{
-  font-family: arial;
-  font-size: 20px;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-} 
-   /* Botão saiba mais */
-#botao-saibamais {
-  gap: 10px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.botaodownload {
-  height: 20px;
-  padding: 5px;
-  font-weight: bolder ;
-  background: #DB0E69;  
-  font-family: arial;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: calc(.2s);
-}
-.botaodownload:hover {
-  background-color: #a7054e;
-  color: white;
-}
-a{
-  font-family: arial;
-  text-decoration: none;
-}
 .vejamais {
   display: flex;
-  margin-top: 10px;
+  margin-top: 2%;
   justify-content: center;
 }
 .vejamais button {
@@ -269,8 +173,8 @@ a{
   color: white;
   border: none;
   font-weight: bolder;
-  font-size: 17px;
-  padding: 10px 10px;
+  font-size: 18px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   transition: calc(.2s);
@@ -280,19 +184,23 @@ a{
 }
 .vejamais button:hover {
   background-color: #5b9fc9;
-  color: white;
+  color: rgb(0, 0, 0);
   transform: scale(1.025);
 }
 
 #container-produtos-view {
+  gap: 20px;
+  margin-top: 10px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  display: none; /* Oculto inicialmente */
-  opacity: 0;    /* Invisível inicialmente */
+  max-height: 0;  /* Altura inicial zero */
+  opacity: 0;
+  transition: linear 0.5s;
 }
 #container-produtos-view.ativo {
-  transition: opacity 0.5s ease-in-out;
-  opacity: 1;   /* Aparece gradualmente */
-  display: flex; /* Mostra o container */
+  max-height: 10000px; /* Ajuste o valor conforme necessário */
+  opacity: 1;
+  transition: linear 0.5s;
 }
 </style>
