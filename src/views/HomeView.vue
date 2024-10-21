@@ -126,7 +126,8 @@ onMounted(() => {
   align-items: center;
   border-bottom: #294459 3px solid;
   @media (max-width: 680px) {
-    height: 700px;
+    height: 100vh;
+    background-size: auto;
     text-align: center;
     width: auto;
     flex-direction: column-reverse;

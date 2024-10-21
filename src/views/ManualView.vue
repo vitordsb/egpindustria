@@ -59,11 +59,19 @@ export default {
     width: 50%;
     height: 50px;
     font-size: 25px;
+    @media (max-width: 680px) {
+        width: auto;
+        height: auto;
+        font-size: 10px;
+    }
 }
 
 .titulo h1 img{
     width: 33px;
     align-items: center;
+    @media (max-width: 680px) {
+        width: 16px;
+  }
 }
 .centrais {
     justify-content: center;
@@ -85,6 +93,9 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 680px) {
+        height: auto;
+  }
 }
 .links {
     gap: 10px;

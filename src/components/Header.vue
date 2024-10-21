@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         toggleMobileMenu() {
-            this.isMobileMenuOpen = !this.isMobileMenuOpen;
+            this.isMobileMenuOpen = this.isMobileMenuOpen;
         },
         closeMobileMenu() {
             this.isMobileMenuOpen = false;
@@ -42,24 +42,31 @@ export default {
                 <RouterLink @click="closeMobileMenu" to="/contact">Contato</RouterLink>
                 <RouterLink @click="closeMobileMenu" to="/loginpage">Login</RouterLink>
             </div>
-            <div class="catalogo">
-                <a href="/src/assets/manuais/nossocatalogo.pdf"><DocumentIcon/>Nosso Catálogo</a>
-            </div>
+                <a target="_blank" href="/src/assets/manuais/nobreak.pdf">
+                    <div class="catalogo">
+                        <DocumentIcon/>
+                        Nosso Catálogo
+                    </div>  
+                </a>
         </div> <!--Final midleside-->
 
         <div class="rightside">
             <div class="app">
                 <p>Baixe nosso app:</p>
                 
-                <div class="googleplay">
-                    <img id="googleplay" src="/images/googleplay.png" alt="Google Play">
-                    <p>Google Play</p>
-                </div>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=br.com.grupoegp&hl=pt_BR">
+                    <div class="googleplay">
+                        <img id="googleplay" src="/images/googleplay.png" alt="Google Play">
+                        <p>Google Play</p>
+                    </div>
+                </a>
 
-                <div class="applestore">
-                    <img src="/images/AppleStore.png" alt="Apple Store">
-                    <p>Apple Store</p>
-                </div>
+                <a href="#">
+                    <div class="applestore">
+                        <img src="/images/AppleStore.png" alt="Apple Store">
+                        <p>Apple Store</p>
+                    </div>
+                </a>
                 
             </div>
         </div>
@@ -94,8 +101,14 @@ export default {
     justify-content: space-around;
     background-color: rgb(255, 255, 255);
     height: 70px;
+    @media (max-width: 680px) {
+        height: 50px;
+    }
 }
 
+a {
+    color: white;
+}
 .leftside {
     display: flex;
     align-items: center;
@@ -105,6 +118,9 @@ export default {
     width: 180px;
     transition: calc(.4s);
     cursor: pointer;
+    @media (max-width: 680px) {
+        width: 120px;
+    }
 }
 .leftside img:hover {
     transform: scale(1.025);

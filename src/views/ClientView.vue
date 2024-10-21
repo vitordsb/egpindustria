@@ -154,8 +154,9 @@
     padding: 50px;
     @media (max-width: 680px) {
         width: auto;
-        height: auto;
+        height: 600px;
         flex-direction: column-reverse;
+        padding: 20px;
     }
 }
 
@@ -175,6 +176,7 @@
         width: auto;
         height: auto;
         flex-direction: column-reverse;
+        padding: 10px;
     }
 }
 
@@ -294,6 +296,11 @@ form h2{
         transform: scale(1.05);
         color: black;
     }
+    @media (max-width: 680px) {
+        font-size: 1rem;
+        padding: 5px;
+        margin: 1.5rem auto 1rem auto;
+  } 
 }
 
 .butao {

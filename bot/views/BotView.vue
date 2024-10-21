@@ -134,6 +134,10 @@ export default {
   margin-top: 10px;
   height: 850px;
   margin-bottom: 40px;
+  @media (max-width: 680px) {
+    height: auto;
+  }
+  
 }
 .media {
   padding: 5px;
@@ -188,6 +192,11 @@ export default {
   padding: 10px;
   display: flex;
   flex-direction: column;
+  @media (max-width: 680px) {
+    width: auto;
+    height: 400px;
+    flex-direction: column-reverse;
+  }
 }
 
 .user-message {
@@ -229,11 +238,17 @@ export default {
 
 .container {
   width: 100%;
+  overflow: hidden;
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(77, 77, 77, 0.378);
   padding: 15px;
   border-radius: 10px;
+  @media (max-width: 680px) {
+    width: auto;
+    height: auto;
+    max-height: 600px;
+  }
 }
 </style>

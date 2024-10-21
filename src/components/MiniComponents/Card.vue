@@ -41,21 +41,37 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 16px;
   background-color: #fff;
+  @media (max-width: 680px) {
+    width: 16rem;
+    height: 10rem;
+    padding: 12px;
+  }
 }
 
 .card-body {
   padding: 10px;
+  @media (max-width: 680px) {
+    padding: 0;
+  }
 }
 
 .card-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  @media (max-width: 680px) {
+    font-size: 1.4rem;
+    margin-bottom: 0.2rem;
+  }
 }
 
 .card-subtitle {
   font-size: 1.2rem;
   color: #6c757d;
   margin-bottom: 1rem;
+  @media (max-width: 680px) {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .card-text {

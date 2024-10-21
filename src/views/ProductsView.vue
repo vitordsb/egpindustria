@@ -91,6 +91,7 @@ export default {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  
 }
 #vermenos:hover {
   background-color: #5b9fc9;
@@ -103,9 +104,13 @@ export default {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
   @media (max-width: 1280px) {
     margin-left: auto;
     margin-right: auto;
+    height: auto;
+  }
+  @media (max-width: 680px) {
     height: auto;
   }
 }
@@ -132,10 +137,10 @@ export default {
   margin-right: auto;
   margin-bottom: 2%;
   @media (max-width: 680px) {
-    font-size: 15px;
+    font-size: 16px;
     gap: 10px;
     width: auto;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 .titulo span {

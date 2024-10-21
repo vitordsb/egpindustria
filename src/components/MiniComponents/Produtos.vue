@@ -40,12 +40,18 @@ export default {
     width: 370px;
     margin: 30px;
   }
+  @media (max-width: 680px) {
+    width: 250px;
+    margin: 10px;
+    height: 220px;
+  }
 }
 #container-pagina-divs-produtos-evp{
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+
 }
 #container-pagina-produtos-evp:hover {
   background-color: #ffffff;
@@ -57,6 +63,10 @@ export default {
   width: auto;
   height: 160px;
   margin: 10px;  
+  @media (max-width: 1280px) {
+    width: auto;
+    height: 130px;
+  }
 }
 #titulo-do-produto{
   font-family: arial;
