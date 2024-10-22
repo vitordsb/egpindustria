@@ -1,96 +1,105 @@
-<script setup>
-import { ref, onMounted } from 'vue';
-import { RouterLink } from 'vue-router' 
+<script>
+import { RouterLink } from 'vue-router';
+import LanguageSwitcher from '@/locales/LanguageSwitcher.vue';
 
-const track = ref(null);
-const currentIndex = ref(0);
-const intervalTime = 1500;
-const totalSlides = 4;  
-function updateCarousel() {
-    const offset = -currentIndex.value * 100;
-    if (track.value) {
-        track.value.style.transform = `translateX(${offset}%)`;
-    }
-}
-function goToNextSlide() {
-    currentIndex.value = (currentIndex.value + 1) % totalSlides;
-    updateCarousel();
-}
-
-onMounted(() => {
-    setInterval(goToNextSlide, intervalTime);
-});
-
+export default {
+  name: 'HomeView',
+  components: {
+    RouterLink,
+    LanguageSwitcher
+  },
+  data() {
+    return {
+      track: null,
+      currentIndex: 0,
+      intervalTime: 1500,
+      totalSlides: 4,
+    };
+  },
+  methods: {
+    updateCarousel() {
+      const offset = -this.currentIndex * 100;
+      if (this.track) {
+        this.track.style.transform = `translateX(${offset}%)`;
+      }
+    },
+    goToNextSlide() {
+      this.currentIndex = (this.currentIndex + 1) % this.totalSlides;
+      this.updateCarousel();
+    },
+    // Método para trocar o idioma
+    changeLanguage(lang) {
+      this.$i18n.locale = lang; // Trocar o idioma usando this.$i18n
+      localStorage.setItem('language', lang); // Persistir o idioma selecionado
+    },
+  },
+  mounted() {
+    this.track = this.$refs.track;
+    setInterval(this.goToNextSlide, this.intervalTime);
+  },
+};
 </script>
 
 <template>
-    <section class="banner">
-        <div class="campos">
-            <div class="carousel">
+  <section class="banner">
+    <LanguageSwitcher/>
+    <div class="campos">
+      <div class="carousel">
+        <div class="carousel-track" ref="track">
+          <div class="carousel-slide">
+            <img src="/public/images/products/12Vimagem.png">
+          </div>
+          <div class="carousel-slide">
+            <img src="/public/images/products/controles.png">
+          </div>
+          <div class="carousel-slide">
+            <img src="/public/images/products/SirenePiezzo.png">
+          </div>
+          <div class="carousel-slide">
+            <img src="/public/images/products/hastes.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="infos">
+      <div class="letras">
+        <div class="logo">
+          <img src="../../public/images/IconeEGP.png" alt="">
+          <h1>GRUPO EGP</h1>
+        </div>
+        <p>{{ $t('best_manufacturer') }}</p> <!-- Exemplo de tradução -->
+      </div>
 
-                <div class="carousel-track" ref="track">
-                    <div class="carousel-slide">
-                        <img src="/public/images/products/12Vimagem.png">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/public/images/products/controles.png">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/public/images/products/SirenePiezzo.png">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="/public/images/products/hastes.png">
-                    </div>
-                </div>
-            </div><!--Final Carrousel-->
-        </div><!--Final campos-->
-            <div class="infos">
-              <div class="letras">
-                <div class="logo">
-                  <img src="../../public/images/IconeEGP.png" alt="">
-                  <h1>GRUPO EGP</h1>
-                </div>
-                <p>A melhor fabricante de eletrificadores.</p>
-              </div>
-                 <div class="links">
-                   <RouterLink to="/products">
-                     <button class="botoes">
-                       <h5>Ver produtos</h5> 
-                     </button>
-                   </RouterLink>
-              
-                   <RouterLink to="/manuais">
-                     <button class="botoes"> 
-                       <h5>Ver manuais</h5>
-                     </button>
-                   </RouterLink>
-                   
-                   <RouterLink to="/sejacliente">
-                     <button class="botoes"> 
-                       <h5>Seja nosso cliente</h5>
-                    </button>
-                  </RouterLink>
-
-                  <RouterLink to="/sejafornecedor">
-                    <button class="botoes"> 
-                      <h5>Comprar com parceiros</h5>
-                    </button>
-                  </RouterLink>
-                  
-                  <RouterLink to="/electrabot">
-                   <button class="botoes">
-                     <h5>Atendimento Virtual</h5>
-                   </button>
-                 </RouterLink>
-                 </div>
-            </div>
-
-            <div class="language">
-                <button>PT-BR</button>
-                <button>ES</button>
-                <button>ENG</button>
-            </div>
-          </section><!--final banner-->
+      <div class="links">
+        <RouterLink to="/products">
+          <button class="botoes">
+            <h5>{{ $t('view_products') }}</h5>
+          </button>
+        </RouterLink>
+        <RouterLink to="/manuais">
+          <button class="botoes">
+            <h5>{{ $t('view_manuals') }}</h5>
+          </button>
+        </RouterLink>
+        <RouterLink to="/sejacliente">
+          <button class="botoes">
+            <h5>{{ $t('become_client') }}</h5>
+          </button>
+        </RouterLink>
+        <RouterLink to="/sejafornecedor">
+          <button class="botoes">
+            <h5>{{ $t('buy_with_partners') }}</h5>
+          </button>
+        </RouterLink>
+        <RouterLink to="/electrabot">
+          <button class="botoes">
+            <h5>{{ $t('virtual_assistant') }}</h5>
+          </button>
+        </RouterLink>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
@@ -233,28 +242,5 @@ onMounted(() => {
 }
 
 
-.language {
-  position: absolute;
-  top: 90px;
-  right: 20px;
-  @media (max-width: 680px) {
-    display: none;
-  }
-}
-.language button {
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  cursor: pointer;
-  transition: calc(.4s);
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.language button:hover{
-  background-color: #7c8287;
-  color: white;
-  transform: scale(1.05);
-}
+
 </style>

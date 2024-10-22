@@ -38,10 +38,9 @@
 <script>
 import Footer from '@/components/Footer.vue';
 import Card from '@/components/MiniComponents/Card.vue';
-
+import LanguageSwitcher from '@/locales/LanguageSwitcher.vue';
 export default {
     name: 'ManualView',
-
     components: {
         Footer,
         Card,

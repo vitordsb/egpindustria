@@ -4,7 +4,7 @@
             <h1><img src="/public/images/IconeEGP.png">EGP PLUG IN WI-FI</h1>
         </div>
         <button class="voltar">
-            <RouterLink to="/products"> <VoltarIcon/>Voltar</RouterLink>
+            <RouterLink to="/products"> <VoltarIcon/>{{ $t('back') }}</RouterLink>
         </button>
 
         <div class="box">
@@ -14,23 +14,23 @@
             
             <div class="especification">
                 <ul class="list">
-                    <li><span>Já vai com Módulo WI-FI</span></li>
-                    <li>Liga e Desliga por controle chave e App</li>
-                    <li>Tensão ajustável 8.000V, 12.000V e 15.000V</li>
-                    <li>Tensão de operação 12Vcc</li>
-                    <li>2 Setores de Alarme independentes</li>
-                    <li>Energia 0,75J 1,75J</li>
-                    <li>Entrada para sensores com e sem fio</li>
-                    <li>Entrada para monitoramento</li>
-                    <li>Sistema anti-sabotagem</li>
-                    <li>Eletrifica de 0,1m a 7.000m de fio linear</li>
-                    <li>Saída de rele CO/NA/NF</li>
-                    <li>Saída Led Cerca</li>
-                    <li>Saída CO/NA/NF</li>
-                    <li>Saída Bip de Sirene Liga Desliga</li>
-                    <li>Compatível com algumas das principais marcas</li>
-                    <li>Nobreak</li>
-                    <li>Saída de 12Vcc para alimentação de periféricos</li>
+                    <li><span>{{$t('Comes with WI-FI Module')}}</span></li>
+                    <li>{{$t('On/Off via key control and App')}}</li>
+                    <li>{{$t('Adjustable voltage 8,000V, 12,000V, and 15,000V')}}</li>
+                    <li>{{$t('Operating voltage 12V DC')}}</li>
+                    <li>{{$t('2 Independent Alarm Zones')}}</li>
+                    <li>{{$t('Energy 0.75J 1.75J')}}</li>
+                    <li>{{$t('Input for wired and wireless sensors')}}</li>
+                    <li>{{$t('Input for monitoring')}}</li>
+                    <li>{{$t('Anti-tampering system')}}</li>
+                    <li>{{$t('Electrifies from 0.1m to 7,000m of wire linear')}}</li>
+                    <li>{{$t('Relay output CO/NA/NF')}}</li>
+                    <li>{{$t('Fence LED output')}}</li>
+                    <li>{{$t('CO/NA/NF output')}}</li>
+                    <li>{{$t('Siren Beep On/Off output')}}</li>
+                    <li>{{$t('Compatible with some major brands')}}</li>
+                    <li>{{$t('Uninterruptible power supply')}}</li>
+                    <li>{{$t('12V DC output for peripheral power supply')}}</li>
                 </ul>
             </div>
             

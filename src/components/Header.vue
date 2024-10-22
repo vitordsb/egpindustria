@@ -1,12 +1,14 @@
 <script >
 import { RouterLink } from 'vue-router';
 import DocumentIcon from '../components/icons/DocumentIcon.vue';
+import LanguageSwitcher from '@/locales/LanguageSwitcher.vue';
 
 export default {
     name: 'Header',
     components: {
         RouterLink,
         DocumentIcon,
+        LanguageSwitcher
     },
     data() {
         return {
@@ -35,11 +37,10 @@ export default {
 
         <div class="midleside">
             <div class="navbar" :class="{open: isMobileMenuOpen}">
-                <RouterLink @click="closeMobileMenu" to="/">Home</RouterLink>
-                <RouterLink @click="closeMobileMenu" to="/products">Produtos</RouterLink>
-                <RouterLink @click="closeMobileMenu" to="/manuais">Manuais</RouterLink>
-                <RouterLink @click="closeMobileMenu" to="/aboutus">Sobre-nós</RouterLink>
-                <RouterLink @click="closeMobileMenu" to="/contact">Contato</RouterLink>
+                <RouterLink @click="closeMobileMenu" to="/">{{ $t('home') }}</RouterLink>
+                <RouterLink @click="closeMobileMenu" to="/products">{{ $t('products') }}</RouterLink>
+                <RouterLink @click="closeMobileMenu" to="/manuais">{{ $t('manuals') }}</RouterLink>
+                <RouterLink @click="closeMobileMenu" to="/aboutus">{{ $t('about') }}</RouterLink>
                 <RouterLink @click="closeMobileMenu" to="/loginpage">Login</RouterLink>
             </div>
                 <a target="_blank" href="/src/assets/manuais/nobreak.pdf">
@@ -52,7 +53,7 @@ export default {
 
         <div class="rightside">
             <div class="app">
-                <p>Baixe nosso app:</p>
+                <p>{{ $t('app') }}</p>
                 
                 <a target="_blank" href="https://play.google.com/store/apps/details?id=br.com.grupoegp&hl=pt_BR">
                     <div class="googleplay">
@@ -67,6 +68,7 @@ export default {
                         <p>Apple Store</p>
                     </div>
                 </a>
+                
                 
             </div>
         </div>
