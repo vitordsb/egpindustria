@@ -12,15 +12,23 @@ export default {
     },
     data() {
         return {
-            isMobileOpen: false,
+            isMobileMenuOpen: false,
         };
     },
     methods: {
         toggleMobileMenu() {
-            this.isMobileMenuOpen = this.isMobileMenuOpen;
+            this.isMobileMenuOpen = !this.isMobileMenuOpen;
+            const mobileMenu = document.querySelector('.mobile-menu');
+        if (this.isMobileMenuOpen) {
+            mobileMenu.classList.add('open');
+        } else {
+            mobileMenu.classList.remove('open');
+        }
         },
         closeMobileMenu() {
             this.isMobileMenuOpen = false;
+            const mobileMenu = document.querySelector('.mobile-menu');
+            mobileMenu.classList.remove('open');
          }
     }
 }
@@ -33,6 +41,7 @@ export default {
             <RouterLink to="/">
                 <img src="/public/images/egppreto.png" alt="Logo" class="logo">
             </RouterLink>
+            <LanguageSwitcher/>
         </div>
 
         <div class="midleside">
@@ -80,7 +89,7 @@ export default {
         </div>
 
         <!-- Menu mobile -->
-        <div v-if="isMobileMenuOpen" class="mobile-menu">
+        <div v-if="isMobileMenuOpen" class="mobile-menu ativo">
             <RouterLink @click="closeMobileMenu" to="/">Home</RouterLink>
             <RouterLink @click="closeMobileMenu" to="/products">Produtos</RouterLink>
             <RouterLink @click="closeMobileMenu" to="/manuais">Manuais</RouterLink>
@@ -248,27 +257,38 @@ div.app div.googleplay:hover {
 
 /* Menu mobile */
 .mobile-menu {
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    height: 100%;
+    width: 40%;
+    background-color: inherit;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Alinhar na horizontal */
     align-items: center;
-    gap: 15px;
+    justify-content: space-around; /* Distribuir as abas igualmente */
     padding: 20px;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(10%);
+    transition: transform 0.5s ease-in-out; 
+    opacity: 1; 
+}
+.mobile-menu.open {
+    transform: translateX(0);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .mobile-menu a {
-    color: #333;
-    font-size: 18px;
+    color: #000000;
+    font-weight: bolder;
+    font-size: 20px;
     text-decoration: none;
     transition: color 0.3s;
 }
 .mobile-menu a:hover {
     color: #3a7980;
+    transition: calc(.4s)
 }
 
 /* Tornar o botão hambúrguer visível em telas menores */
@@ -276,7 +296,6 @@ div.app div.googleplay:hover {
     .hamburger {
         display: flex;
     }
-
     .midleside .navbar,
     .catalogo,
     .rightside {

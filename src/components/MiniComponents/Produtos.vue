@@ -5,7 +5,7 @@
             <span id="titulo-do-produto">{{title}}</span>
             <div id="botao-saibamais">
               <RouterLink :to="{path: specific}" class="botaodownload">
-                Ver especificações
+                {{ $t('saibamais') }}
               </RouterLink>
             </div>
           </div>

@@ -1,8 +1,8 @@
 <template>
     
   <div class="language">
-      <button @click="changeLanguage('pt')">PT-BR</button>
-      <button @click="changeLanguage('es')">ES-ES</button>
+      <button @click="changeLanguage('pt')"> <img src="/public/brasil.png" alt="">PT-BR</button>
+      <button @click="changeLanguage('es')"> <img src="/public/espanha.png" alt="">ES-ES</button>
   </div>
 
 </template>
@@ -28,30 +28,31 @@ export default {
 
 <style scoped>
 .language {
-  position: absolute;
-  top: 100px;
-  z-index: 999;
-  right: 80px;
+    display: flex;
+  position: relative;
   @media (max-width: 680px) {
     position: inherit;
-    display: flex;  
-    justify-content: center;
   }
 }
 .language button {
   background-color: transparent;
-  color: rgb(255, 255, 255);
+  color: rgb(4, 4, 4);
   border: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
   font-size: 18px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   transition: calc(.4s);
   border-radius: 5px;
   margin-right: 10px;
 }
 .language button:hover{
-  background-color: #7c8287;
-  color: white;
+  background-color: #dddddd;
   transform: scale(1.05);
+}
+.language button img {
+    width: 20px;
 }
 </style>

@@ -3,13 +3,12 @@
         <div class="card-body">
           <h5 class="card-title">{{title}}</h5>
           <h6 class="card-subtitle">{{subtitle}}</h6>
-          <p class="card-text">{{text}}</p>
               <div class="links">
                   <RouterLink :to="{path: ver}" class="card-link">
-                  Ver produto
+                  {{ $t('verProducts') }}
                   </RouterLink>
                   <a :href="baixar" class="card-link">
-                  Baixar Manual
+                  {{ $t('download_manual') }}
                   </a>
               </div><!--Final dos links-->
         </div><!-- Final do card-body-->
@@ -22,7 +21,6 @@ export default {
     props: {
         title: String,
         subtitle: String,
-        text: String,
         ver: String,
         baixar: String
     },
@@ -35,7 +33,7 @@ export default {
 <style scoped>
 .card {
   width: 18rem;
-  height: 11rem;
+  height: 7rem;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -43,8 +41,8 @@ export default {
   background-color: #fff;
   @media (max-width: 680px) {
     width: 16rem;
-    height: 10rem;
-    padding: 12px;
+    height: 5rem;
+    padding: 10px;
   }
 }
 
@@ -59,7 +57,7 @@ export default {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   @media (max-width: 680px) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 0.2rem;
   }
 }
@@ -72,11 +70,6 @@ export default {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-}
-
-.card-text {
-  font-size: 1rem;
-  margin-bottom: 1.0rem;
 }
 
 .card-link {

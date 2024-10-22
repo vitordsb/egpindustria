@@ -3,31 +3,31 @@
          <!-- Criando cards com os manuais da egp-->
         
          <div class="centrais">
-
             <div class="titulo">    
             <h1>Manual produtos <img src="/public/images/IconeEGP.png" alt=""> EGP</h1>
             </div>
                 
             <div class="blocos">
                 
-                <Card title="Central 12V" subtitle="Eletrificador 12.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 12V" subtitle="Eletrificador 12.000" ver="#" baixar="#"/>
 
-                <Card title="Central PLUG IN" subtitle="Eletrificador com módulo wifi" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="/pluginView" baixar="#"/>
+                <Card title="Central PLUG IN" subtitle="Eletrificador com módulo wifi" ver="/pluginView" baixar="#"/>
                 
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000" ver="#" baixar="#"/>
              
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000" ver="#" baixar="#"/>
 
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
-                <Card title="Central 12V" subtitle="Eletrificador 12.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000" ver="#" baixar="#"/>
+
+                <Card title="Central 12V" subtitle="Eletrificador 12.000" ver="#" baixar="#"/>
         
-                <Card title="Central PLUG IN" subtitle="Eletrificador com módulo wifi" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central PLUG IN" subtitle="Eletrificador com módulo wifi"ver="#" baixar="#"/>
                 
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000" ver="#" baixar="#"/>
              
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000"  ver="#" baixar="#"/>
         
-                <Card title="Central 20V" subtitle="Eletrificador 20.000" text="Some quick example text to build on the card title and make up the bulk of the card's content." ver="#" baixar="#"/>
+                <Card title="Central 20V" subtitle="Eletrificador 20.000" ver="#" baixar="#"/>
 
             </div><!--Final bloco 1-->
         </div><!--Final centrais-->
@@ -36,13 +36,10 @@
 </template>
 
 <script>
-import Footer from '@/components/Footer.vue';
 import Card from '@/components/MiniComponents/Card.vue';
-import LanguageSwitcher from '@/locales/LanguageSwitcher.vue';
 export default {
     name: 'ManualView',
     components: {
-        Footer,
         Card,
     }
 }
@@ -88,7 +85,7 @@ export default {
     gap: 20px;
 }
 .background {
-    height: 580px;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;

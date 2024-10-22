@@ -42,7 +42,6 @@ export default {
 
 <template>
   <section class="banner">
-    <LanguageSwitcher/>
     <div class="campos">
       <div class="carousel">
         <div class="carousel-track" ref="track">
@@ -85,11 +84,6 @@ export default {
         <RouterLink to="/sejacliente">
           <button class="botoes">
             <h5>{{ $t('become_client') }}</h5>
-          </button>
-        </RouterLink>
-        <RouterLink to="/sejafornecedor">
-          <button class="botoes">
-            <h5>{{ $t('buy_with_partners') }}</h5>
           </button>
         </RouterLink>
         <RouterLink to="/electrabot">

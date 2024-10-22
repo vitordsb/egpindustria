@@ -71,6 +71,11 @@ a {
     left: 350px;
     cursor: pointer;
     top: 30px;
+    @media (max-width: 680px) {
+        position: relative;
+        left: 10px;
+        top: 10px;
+    }
 }
 .especification {
     background-color: rgb(168, 214, 255);
@@ -80,11 +85,20 @@ a {
     color: rgb(0, 0, 0);
     font-size: 20px;
     border-radius: 10px;
+    @media (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+        width: 270px;
+        gap: 10px;
+    }
 }
 .list {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @media (max-width: 680px) {
+        
+    }
 }
 .list span {
     font-weight: bold;
@@ -97,6 +111,10 @@ a {
 .background {
     background-color: #edf8ff;
     height: 80vh;
+    @media (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .titulo {
     display: flex;
@@ -107,6 +125,11 @@ a {
     background-color: #3C6D7E;
     color: white;
     font-size: 30px;
+    @media (max-width: 680px) {
+        font-size: 10px;
+        height: 10vh;
+        width: 100%;
+    }
 }
 .titulo h1{
     display: flex;
@@ -121,6 +144,15 @@ a {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    @media (max-width: 680px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.produto img {
+    @media (max-width: 680px) {
+        width: 200px;
+    }
 }
 
 </style>

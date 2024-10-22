@@ -97,7 +97,7 @@
                             <UserIcon/>
                         </div>
                         <div>
-                            <input class="input" type="text" name="" id="" placeholder="Razão Social/ Nome fantasia:">
+                            <input class="input" type="text" name="" id="" placeholder="Distribuidor:">
                         </div>
                         
                     </div>

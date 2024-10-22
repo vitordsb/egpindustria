@@ -29,7 +29,7 @@ export default {
 </script>
 
 <template>
-        <Header/>
+      <Header/>
         <Transition name="router" mode="out-in">
           <router-view v-slot="{Component}">
             <component :is="Component" :key="$router.fullPath">
