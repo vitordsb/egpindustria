@@ -46,16 +46,16 @@ export default {
       <div class="carousel">
         <div class="carousel-track" ref="track">
           <div class="carousel-slide">
-            <img src="/public/images/products/12Vimagem.png">
+            <img src="/src/images/products/12Vimagem.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/controles.png">
+            <img src="/src/images/products/controles.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/SirenePiezzo.png">
+            <img src="/src/images/products/SirenePiezzo.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/hastes.png">
+            <img src="/src/images/products/hastes.png">
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default {
     <div class="infos">
       <div class="letras">
         <div class="logo">
-          <img src="../../public/images/IconeEGP.png" alt="">
+          <img src="/src/images/IconeEGP.png" alt="">
           <h1>GRUPO EGP</h1>
         </div>
         <p>{{ $t('best_manufacturer') }}</p> <!-- Exemplo de tradução -->

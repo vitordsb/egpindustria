@@ -12,26 +12,26 @@ export default {
     <div class="background">  
         <div class="flexbox">
             <div class="image">
-                <img src="/images/AboutUs.png" alt="">
+                <img src="/src/images/AboutUs.png" alt="">
             </div>
             <div class="box-paises">
                     <h2>Nosso comércio exterior</h2>
                 <div class="grid-layout">
-                    <Pais nome="Angola" img="/public/images/paises/angola.png"/>
-                    <Pais nome="Argentina" img="/public/images/paises/argentina.png"/>
-                    <Pais nome="Chile" img="/public/images/paises/chile.png"/>
-                    <Pais nome="Colombia" img="/public/images/paises/colombia.png"/>
-                    <Pais nome="Porto Rico" img="/public/images/paises/portorico.png"/>
-                    <Pais nome="Guiana" img="/public/images/paises/guiana.png"/>
-                    <Pais nome="Uruguai" img="/public/images/paises/uruguai.png"/>
-                    <Pais nome="Paraguai" img="/public/images/paises/paraguai.png"/>
-                    <Pais nome="Peru" img="/public/images/paises/peru.png"/>
-                    <Pais nome="Suriname" img="/public/images/paises/suriname.png"/>
-                    <Pais nome="Venezuela" img="/public/images/paises/venezuela.png"/>
-                    <Pais nome="México" img="/public/images/paises/méxico.png"/>
-                    <Pais nome="Equador" img="/public/images/paises/equador.png"/>
-                    <Pais nome="Nicaragua" img="/public/images/paises/Nicaragua.png"/>
-                    <Pais nome="Bolivia" img="/public/images/paises/Bolivia.png"/>
+                    <Pais nome="Angola" img="/src/images/paises/angola.png"/>
+                    <Pais nome="Argentina" img="/src/images/paises/argentina.png"/>
+                    <Pais nome="Chile" img="/src/images/paises/chile.png"/>
+                    <Pais nome="Colombia" img="/src/images/paises/colombia.png"/>
+                    <Pais nome="Porto Rico" img="/src/images/paises/portorico.png"/>
+                    <Pais nome="Guiana" img="/src/images/paises/guiana.png"/>
+                    <Pais nome="Uruguai" img="/src/images/paises/uruguai.png"/>
+                    <Pais nome="Paraguai" img="/src/images/paises/paraguai.png"/>
+                    <Pais nome="Peru" img="/src/images/paises/peru.png"/>
+                    <Pais nome="Suriname" img="/src/images/paises/suriname.png"/>
+                    <Pais nome="Venezuela" img="/src/images/paises/venezuela.png"/>
+                    <Pais nome="México" img="/src/images/paises/méxico.png"/>
+                    <Pais nome="Equador" img="/src/images/paises/equador.png"/>
+                    <Pais nome="Nicaragua" img="/src/images/paises/Nicaragua.png"/>
+                    <Pais nome="Bolivia" img="/src/images/paises/Bolivia.png"/>
                 </div><!--Final Grid Layout-->
             </div><!--Final box-paises-->
         </div> <!--Final flexbox-->
