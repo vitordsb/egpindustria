@@ -9,7 +9,7 @@
     name: 'Pais',
     props: {
         nome: String,
-        img: String
+        img: () => import({img})
     }
  }
 </script>

@@ -28,7 +28,7 @@
 
             <Produtos title="Haste Quadrada" img="../../public/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="EGP GUARD ON" img="../../public/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
 
             <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
             
