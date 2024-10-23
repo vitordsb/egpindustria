@@ -25,6 +25,7 @@
             </div>
 
         <div id="container-produtos-view">
+
             <Produtos title="Haste Quadrada" img="/src/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
 
             <Produtos title="EGP GUARD ON" img="/src/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
@@ -35,7 +36,8 @@
 
             <Produtos title="EGP GUARD ON" img="/src/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>   
 
-            <Produtos title="EGP GUARD ON" img="/src/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>      
+            <Produtos title="EGP GUARD ON" img="/src/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>    
+              
         </div><!--final de todos os produtos-->
       <button id="vermenos" v-on:click="fecharTodosProdutos">Ver menos</button>
     </section> <!--final portifolio-->

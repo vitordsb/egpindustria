@@ -91,6 +91,11 @@ export default {
             <h5>{{ $t('virtual_assistant') }}</h5>
           </button>
         </RouterLink>
+        <RouterLink to="/aboutus">
+          <button class="botoes">
+            <h5>{{ $t('about') }}</h5>
+          </button>
+        </RouterLink>
       </div>
     </div>
   </section>
@@ -129,7 +134,8 @@ export default {
   align-items: center;
   border-bottom: #294459 3px solid;
   @media (max-width: 680px) {
-    height: 100vh;
+    height: 120vh;
+    gap: 50px;
     background-size: auto;
     text-align: center;
     width: auto;
@@ -169,9 +175,12 @@ export default {
     align-items: center;
     height: 90%;
     width: 30%;
-    @media (max-width:680px) {
-      margin-left: 0;
-    }
+    @media (max-width: 680px) {
+      margin-left: 0px;
+      width: 200px;
+      height: 200px;
+    
+  }
 }
 .carousel {
   position: relative;
@@ -180,7 +189,9 @@ export default {
   @media (max-width: 680px) {
     margin-left: auto;
     margin-right: auto;
-    display: none;
+    display: flex;
+    width: 350px;
+    margin-bottom: 50px;
   }
 }
 .carousel-track {
@@ -192,6 +203,11 @@ export default {
   min-width: 100%; /* Cada slide ocupa toda a largura */
   box-sizing: border-box;
   text-align: center;
+  @media (max-width: 680px) {
+      width: auto;
+      height: auto;
+      padding: 10px;
+  }
 
 }
   
@@ -209,6 +225,11 @@ export default {
   @media (max-width: 1280px) {
     width: 300px;
     height: 300px;
+  }
+  @media (max-width: 680px) {
+      width: auto;
+      height: auto;
+      padding: 0;
   }
 }
 

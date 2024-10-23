@@ -3,7 +3,7 @@ import Pais from '@/components/MiniComponents/Pais.vue';
 export default {
     name: "aboutus",
     components: {
-        Pais
+        Pais,
     }
 }
 </script>
@@ -36,6 +36,7 @@ export default {
             </div><!--Final box-paises-->
         </div> <!--Final flexbox-->
     </div> <!--Final background-->
+    <Footer/>
 </template>
 
 <style scoped>
@@ -43,6 +44,11 @@ export default {
 .background {
     margin-bottom: 80px;
     background-color: aliceblue;
+    @media (max-width: 680px) {
+        width: auto;
+        height: auto;
+        padding: 10px;
+    }
 }
 
 .flexbox {
@@ -59,6 +65,12 @@ export default {
     @media (max-width: 1280px) {
         width: 1300px;
     }
+    @media (max-width: 680px) {
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
 }
 .box-paises {
     width: 900px;
@@ -71,6 +83,11 @@ export default {
         width: 700px;
         height: 560px;
     }
+    @media (max-width: 680px) {
+        width: auto;
+        height: auto;
+    }
+    
 }
 .box-paises h2 {
     margin-bottom: 50px;
@@ -83,6 +100,11 @@ export default {
     color: rgb(255, 255, 255);
     background-color: #fa0d6c;
     font-weight: bold;
+    @media (max-width: 680px) {
+        width: auto;
+        height: auto;
+        font-size: 30px;
+    }
 }
 .grid-layout {
     width: auto;
@@ -94,6 +116,13 @@ export default {
     justify-content: center;
     @media (max-width: 1280px) {
         gap: 50px;
+    }
+}
+.image img {
+    @media (max-width: 680px) {
+        width: 350px;
+        height: auto;
+        padding: 10px;
     }
 }
 
