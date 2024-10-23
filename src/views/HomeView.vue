@@ -133,8 +133,8 @@ export default {
   display: flex;
   align-items: center;
   border-bottom: #294459 3px solid;
-  @media (max-width: 680px) {
-    height: 120vh;
+  @media (max-width: 915px) {
+    height: auto;
     gap: 50px;
     background-size: auto;
     text-align: center;
