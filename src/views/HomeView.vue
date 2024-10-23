@@ -12,8 +12,8 @@ export default {
     return {
       track: null,
       currentIndex: 0,
-      intervalTime: 1500,
-      totalSlides: 4,
+      intervalTime: 2000,
+      totalSlides: 6,
     };
   },
   methods: {
@@ -46,16 +46,22 @@ export default {
       <div class="carousel">
         <div class="carousel-track" ref="track">
           <div class="carousel-slide">
-            <img src="/public/images/products/12Vimagem.png">
+            <img src="/images/products/12Vimagem.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/controles.png">
+            <img src="/images/products/CONTROLE_4B.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/SirenePiezzo.png">
+            <img src="/images/products/SireneStrobo.png">
           </div>
           <div class="carousel-slide">
-            <img src="/public/images/products/hastes.png">
+            <img src="/images/products/SirenePiezzo.png">
+          </div>
+          <div class="carousel-slide">
+            <img src="/images/products/Voltimetro.png">
+          </div>
+          <div class="carousel-slide">
+            <img src="/images/products/12nobreak.png">
           </div>
         </div>
       </div>
@@ -64,7 +70,7 @@ export default {
     <div class="infos">
       <div class="letras">
         <div class="logo">
-          <img src="/public/images/IconeEGP.png" alt="">
+          <img src="/images/IconeEGP.png" alt="">
           <h1>GRUPO EGP</h1>
         </div>
         <p>{{ $t('best_manufacturer') }}</p> <!-- Exemplo de tradução -->
@@ -126,7 +132,7 @@ export default {
   height: 80px;
 }
 .banner {
-  background-image: url(../images/background.jpg);
+  background-image: url(/images/background.jpg);
   width: auto;
   height: 900px;
   background-size: auto;
@@ -200,9 +206,10 @@ export default {
 }
   
 .carousel-slide {
-  min-width: 100%; /* Cada slide ocupa toda a largura */
+  min-width: 100%; 
   box-sizing: border-box;
   text-align: center;
+  align-content: center;
   @media (max-width: 680px) {
       width: auto;
       height: auto;
@@ -223,8 +230,8 @@ export default {
   max-height: auto;
   height: auto;
   @media (max-width: 1280px) {
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: auto;
   }
   @media (max-width: 680px) {
       width: auto;

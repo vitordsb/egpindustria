@@ -4,7 +4,7 @@
       <div class="inner">
         <div class="signIn" v-if="signIn">
           <div class="top">
-            <img class="logo"src="/public/images/egppreto.png"/>
+            <img class="logo"src="/images/egppreto.png"/>
             <div class="title">Fazer login</div>
             <div class="subtitle"> Não tem uma conta?
               <span class="subtitle-action" @click="signIn = !signIn">
@@ -55,7 +55,7 @@
 
         <div class="register" v-else>
           <div class="top">
-            <img class="logo"src="/public/images/egppreto.png"/>
+            <img class="logo"src="/images/egppreto.png"/>
             <div class="title">Crie uma conta</div>
             <div class="subtitle">
               Já tem uma conta?

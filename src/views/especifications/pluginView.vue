@@ -90,6 +90,7 @@ a {
         flex-direction: column;
         width: 270px;
         gap: 10px;
+        height: auto;
     }
 }
 .list {
@@ -114,6 +115,8 @@ a {
     @media (max-width: 680px) {
         display: flex;
         flex-direction: column;
+        height: auto;
+        margin-bottom: 20px;
     }
 }
 .titulo {
@@ -147,6 +150,7 @@ a {
     @media (max-width: 680px) {
         display: flex;
         flex-direction: column;
+        height: auto;
     }
 }
 .produto img {

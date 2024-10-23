@@ -20,7 +20,7 @@ export default {
   },  
     props: {
         title: String,
-        img: () => import({img}),
+        img: String,
         specific: String
     }
 }

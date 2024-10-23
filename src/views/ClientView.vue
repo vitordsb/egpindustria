@@ -90,7 +90,7 @@
                                 <VoltarIcon/>
                             </RouterLink>
                         </button>
-                    <h2>Olá, Distribuidor</h2>
+                    <h2>{{ $t('hello') }}</h2>
 
                     <div class="input-div">
                         <div class="icon">
@@ -211,11 +211,11 @@ form{
 }
 
 form h2{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 5px;
     color: #427D8D;
     @media (max-width: 680px) {
-        font-size: 2rem;
+        font-size: 25px;
     }
 }
 

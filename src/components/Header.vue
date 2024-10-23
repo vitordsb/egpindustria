@@ -39,7 +39,7 @@ export default {
     <header class="header">
         <div class="leftside">
             <RouterLink to="/">
-                <img src="/public/images/egppreto.png" alt="Logo" class="logo">
+                <img src="/images/egppreto.png" alt="Logo" class="logo">
             </RouterLink>
             <LanguageSwitcher/>
         </div>
@@ -55,7 +55,7 @@ export default {
                 <a target="_blank" href="/src/assets/manuais/nobreak.pdf">
                     <div class="catalogo">
                         <DocumentIcon/>
-                        Nosso Catálogo
+                        {{ $t('catalog') }}
                     </div>  
                 </a>
         </div> <!--Final midleside-->
@@ -66,14 +66,14 @@ export default {
                 
                 <a target="_blank" href="https://play.google.com/store/apps/details?id=br.com.grupoegp&hl=pt_BR">
                     <div class="googleplay">
-                        <img id="googleplay" src="/public/images/googleplay.png" alt="Google Play">
+                        <img id="googleplay" src="/images/googleplay.png" alt="Google Play">
                         <p>Google Play</p>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="applestore">
-                        <img src="/public/images/AppleStore.png" alt="Apple Store">
+                        <img src="/images/AppleStore.png" alt="Apple Store">
                         <p>Apple Store</p>
                     </div>
                 </a>

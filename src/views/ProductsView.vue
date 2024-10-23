@@ -1,23 +1,23 @@
 <template>
     <section class="portifolio">
           <div class="titulo">
-              <img src="/public/images/IconeEGP.png" alt="">
-              <h1>Lançamentos EGP <span>2024</span></h1>
+              <img src="/images/IconeEGP.png" alt="">
+              <h1>{{ $t('laucher') }} EGP <span>2024</span></h1>
           </div>
           
         <div id="container-produtos-evp"ref="produtosContainer">
 
-            <Produtos title="EGP Plug IN WI-FI" img="../../public/images/products/12Vimagem.png" specific="/pluginView"/>
+            <Produtos title="EGP Plug IN WI-FI" img="/images/products/12Vimagem.png" specific="/pluginView"/>
 
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12Vimagem.png" specific="/guardon"/>
+            <Produtos title="EGP GUARD ON" img="/images/products/12Vimagem.png" specific="/guardon"/>
 
-            <Produtos title="Módulo WI-FI" img="../../public/images/products/Modulo Wifi.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="Módulo WI-FI" img="/images/products/Modulo Wifi.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="Sirene Strobo" img="../../public/images/products/SireneStrobo.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="Sirene Strobo" img="/images/products/SireneStrobo.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="Controle Copiador" img="../../public/images/products/Controle 4b copiador.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="Controle Copiador" img="/images/products/Controle 4b copiador.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="Controle 4 Botões" img="../../public/images/products/CONTROLE_4B.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="Controle 4 Botões" img="/images/products/CONTROLE_4B.png" specific="/public/images/products/12nobreak.pdf"/>
         </div><!--final container-produtos-evp-->
                 
             <div class="vejamais">
@@ -26,17 +26,17 @@
 
         <div id="container-produtos-view">
 
-            <Produtos title="Haste Quadrada" img="../../public/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="Haste Quadrada" img="/images/products/hastes.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
             
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
+            <Produtos title="EGP GUARD ON" img="/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>
 
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>   
+            <Produtos title="EGP GUARD ON" img="/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>   
 
-            <Produtos title="EGP GUARD ON" img="../../public/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>    
+            <Produtos title="EGP GUARD ON" img="/images/products/12nobreak.png" specific="/public/images/products/12nobreak.pdf"/>    
               
         </div><!--final de todos os produtos-->
       <button id="vermenos" v-on:click="fecharTodosProdutos">Ver menos</button>

@@ -7,18 +7,16 @@
         <div class="footer-left">
             <h1>Grupo EGP</h1>
             <p class="footer-links">
-                <a href="#">Home</a>
+                <a href="#">{{ $t('home') }}</a>
                 |
-                <a href="#">Sobre Nós</a>
+                <a href="#">{{ $t('about') }}</a>
                 |
-                <a href="#">contato</a>
-                |
-                <a href="#">Produtos</a>
+                <a href="#">{{ $t('products') }}</a>
             </p>
             <p class="footer-company-name">Coporight º 2022 Grupo EGP</p>
             <div class="footer-center">
                     <div >
-                        <p><span>Rua Indochina, 159 - Jd. Fontana</span>, Cotia - SP, 06.713-030 </p>                   
+                        <p><span>{{ $t('address') }} Indochina, 159 - Jd. Fontana</span>, Cotia - SP, 06.713-030 </p>                   
                     </div>
     
                     <div>
@@ -27,9 +25,9 @@
                     
                     <div class="contato">
                         <a href="nathanna@grupoegp.com.br">Comercial</a>
-                        <a href="financeiro@grupoegp.com.br">Financeiro</a>
+                        <a href="financeiro@grupoegp.com.br">{{ $t('finance') }}</a>
                         <a href="compras@grupoegp.com.br">Compras</a>
-                        <a href="claudio@grupoegp.com.br">Suporte</a>
+                        <a href="claudio@grupoegp.com.br">{{ $t('support') }}</a>
                         <a href="vitor@grupoegp.com.br">RH</a>
                     </div>
                 </div>

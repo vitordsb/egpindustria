@@ -113,6 +113,8 @@ a {
     @media (max-width: 680px) {
         display: flex;
         flex-direction: column;
+        height: auto;
+        margin-bottom: 20px;
     }
 }
 .titulo {

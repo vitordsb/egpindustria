@@ -4,7 +4,7 @@
         
          <div class="centrais">
             <div class="titulo">    
-            <h1>Manual produtos <img src="/public/images/IconeEGP.png" alt=""> EGP</h1>
+            <h1>Manual produtos <img src="/images/IconeEGP.png" alt=""> EGP</h1>
             </div>
                 
             <div class="blocos">

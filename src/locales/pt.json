@@ -11,7 +11,11 @@
   "manuals": "Manuais",
   "client": "Cliente",
   "partners": "Parceiros",
+  "catalog": "Nosso catálogo",
   "home": "inicio",
+  "address": "Endereço",
+  "finance": "Financeiro",
+  "support": "Suporte",
   "about": "Sobre nós",
   "app": "Baixe nosso App",
   "back": "Voltar",
@@ -32,5 +36,8 @@
   "Siren Beep On/Off output": "Saída Bip de Sirene Liga Desliga",
   "Compatible with some major brands": "Compatível com algumas das principais marcas",
   "Uninterruptible power supply": "Nobreak",
-  "12V DC output for peripheral power supply": "Saída de 12Vcc para alimentação de periféricos"
+  "12V DC output for peripheral power supply": "Saída de 12Vcc para alimentação de periféricos",
+  "hello": "Olá Distribuidor!",
+  "paises": "Nosso comercio exterior",
+  "laucher": "Lançamentos"
 }

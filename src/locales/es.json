@@ -11,7 +11,11 @@
   "manuals": "Manuales",
   "client": "Cliente",
   "partners": "Socios",
+  "catalog": "Nuestro catalogo",
   "home": "Casa",
+  "address": "Camino",
+  "finance": "Finanzas",
+  "support": "Apoyo",
   "about": "Acerca de nosotros",
   "app": "descarga nuestra aplicación",
   "back": "Volver",
@@ -32,5 +36,8 @@
   "Siren Beep On/Off output": "Salida de beep de sirena Enciende/Apaga",
   "Compatible with some major brands": "Compatible con algunas de las principales marcas",
   "Uninterruptible power supply": "Sistema de alimentación ininterrumpida",
-  "12V DC output for peripheral power supply": "Salida de 12V CC para alimentación de periféricos"
+  "12V DC output for peripheral power supply": "Salida de 12V CC para alimentación de periféricos",
+  "hello": "Hola distribuidor!",
+  "paises": "Nuestro comercio exterior",
+  "laucher": "Lanzamiento"
 }

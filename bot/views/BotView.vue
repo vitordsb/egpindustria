@@ -2,7 +2,7 @@
   <main class="fundo">
     <div class="container">
       <div class="media">
-        <img src="/public/images/IconeEGP.png" class="image" width="45px" alt="...">
+        <img src="/images/IconeEGP.png" class="image" width="45px" alt="...">
         <div class="media-body">
           <h5>Electra</h5>
           <span>ON-LINE</span>
