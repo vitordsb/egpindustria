@@ -39,7 +39,7 @@ export default {
     <header class="header">
         <div class="leftside">
             <RouterLink to="/">
-                <img src="/src/images/egppreto.png" alt="Logo" class="logo">
+                <img src="/public/images/egppreto.png" alt="Logo" class="logo">
             </RouterLink>
             <LanguageSwitcher/>
         </div>
@@ -66,14 +66,14 @@ export default {
                 
                 <a target="_blank" href="https://play.google.com/store/apps/details?id=br.com.grupoegp&hl=pt_BR">
                     <div class="googleplay">
-                        <img id="googleplay" src="/src/images/googleplay.png" alt="Google Play">
+                        <img id="googleplay" src="/public/images/googleplay.png" alt="Google Play">
                         <p>Google Play</p>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="applestore">
-                        <img src="/src/images/AppleStore.png" alt="Apple Store">
+                        <img src="/public/images/AppleStore.png" alt="Apple Store">
                         <p>Apple Store</p>
                     </div>
                 </a>
