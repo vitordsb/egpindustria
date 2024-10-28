@@ -87,7 +87,7 @@ export default {
     function createTypingElement(name) {
       let typingElement = document.createElement('div');
       typingElement.classList.add('typing-element'); // Adiciona a classe de estilo para o "digitando"
-      typingElement.innerHTML = `<span>${name}: </span><span id='dots'>Energizando</span>`;
+      typingElement.innerHTML = `<img width="20px" src="/images/IconeEGP.png"/>  <span>${name}: </span><span id='dots'>Energizando</span>`;
       return typingElement;
     }
 
@@ -103,7 +103,7 @@ export default {
       let messageElement = document.createElement('div');
       messageElement.classList.add('bot-message'); // Adiciona a classe de estilo para a mensagem do bot
       messageElement.style.color = color;
-      messageElement.innerHTML = `<span>Electra: </span><span>${message}</span>`;
+      messageElement.innerHTML = ` <img width="20px" src="/images/IconeEGP.png"/> <span>Electra: </span><span>${message}</span>`;
       chatContainer.appendChild(messageElement);
     }
 

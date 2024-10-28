@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ClientesModule } from './clientes/clientes.module';
+import { Cliente } from './clientes/entities/cliente.entity';
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -11,9 +13,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'root',
       password: '2419',
       database: 'egpind',
-      entities: [],
+      entities: [Cliente],
       synchronize: true,
     }),
+    ClientesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
